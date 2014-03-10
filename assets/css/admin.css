@@ -1,0 +1,728 @@
+/* General */
+
+#adminmenu #toplevel_page_wpguards div.wp-menu-image img {
+	position: relative;
+	bottom: 3px;
+	right: 3px;
+}
+
+#icon-wpguards-open.icon32 {
+	background-image: url(../images/logo_open_32.png);
+}
+
+#icon-wpguards-close.icon32 {
+	background-image: url(../images/logo_close_32.png);
+}
+
+.wrap .wpguards-tab-content {
+	margin-top: 10px;
+}
+.wpguards-tab-content.support {
+	display: none;
+}
+#wpbody-content {
+	min-height: 500px;
+}
+.wpguards-tab-content hr {
+	background-color: #ccc;
+	border: none;
+	height: 1px;
+}
+
+.section-title {
+	font-size: 17px;
+	line-height: 2em;
+	color: #21759b;
+	font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+}
+
+.postbox.overview .section-title {
+	border-bottom: 1px solid #ccc;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.postbox.overview .section-title:nth-child(1) {
+	margin-top: 0;
+}
+
+.wpguards-tab-content .postbox h3 {
+	cursor: auto !important;
+}
+
+
+
+
+/* Dashboard */
+
+#dashboard_wpguards section {
+	margin-bottom: 12px;
+}
+
+#dashboard_wpguards a.rsswidget {
+	cursor: pointer;
+}
+
+#dashboard_wpguards div.wpg-rss ul li:nth-last-child(1) {
+	margin-bottom: 0;
+}
+
+#dashboard_wpguards div.inside div.handle {
+	position: relative;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+#dashboard_wpguards div.inside div.handle a.see_more {
+	position: absolute;
+	bottom: 10px;
+	right: 0;
+}
+
+#dashboard_wpguards section.support span.required  {
+	color: red;
+}
+
+#dashboard_wpguards section.support span.right {
+	float: right;
+}
+
+
+#dashboard_wpguards section.backups table#simple_backups {
+	margin-top: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+#dashboard_wpguards section.backups table#simple_backups th {
+	border-bottom: 1px dotted #ccc;
+}
+
+#dashboard-widgets #dashboard_wpguards .wpg-support .form-table th,
+#dashboard-widgets #dashboard_wpguards .wpg-support input.regular-text, #adduser .form-field input {
+	width: auto;
+}
+
+#dashboard-widgets #dashboard_wpguards .wpg-support span.support-type-select {
+	display: block;
+}
+
+@media screen and (max-width: 782px) {
+
+	#dashboard-widgets #dashboard_wpguards .wpg-support input.regular-text, #adduser .form-field input {
+		width: 100%;
+	}
+
+	#dashboard-widgets #dashboard_wpguards .wpg-support span.support-type-select {
+		display: inline;
+	}
+
+}
+
+
+
+
+/* Home page */
+
+.wpguards-tab-content.home #post-body-content {
+	margin-right: 50%;
+}
+
+.wpguards-tab-content.home .inner-sidebar {
+	width: 48%;
+}
+
+.wpguards-tab-content.home .inner-sidebar .postbox.upgrade .current-plan {
+	margin-bottom: 10px;
+}
+
+.wpguards-tab-content.home .postbox.overview .inside {
+	font-size: 15px;
+}
+
+.wpguards-tab-content.home .postbox.overview .inside .button-secondary.upgrade-plan {
+	margin-left: 5px;
+	position: relative;
+	bottom: 3px;
+	zoom: 0.8;
+}
+
+.wpguards-tab-content.home table#plans,
+.wpguards-tab-content.home table#backups {
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    border-spacing: 0;
+}
+
+.wpguards-tab-content.home table#backups {
+	margin-bottom: 20px;
+}
+
+.wpguards-tab-content.home table#plans td,
+.wpguards-tab-content.home table#backups td {
+	padding: 10px 0;
+	border-left: 1px solid #ccc;
+}
+
+.wpguards-tab-content.home table#plans thead td,
+.wpguards-tab-content.home table#plans thead th,
+.wpguards-tab-content.home table#backups thead td,
+.wpguards-tab-content.home table#backups thead th {
+	background: #629CD1;
+	color: #fff;
+	padding: 10px 0;
+	border: 0;
+	font-weight: bold;
+}
+
+.wpguards-tab-content.home table#backups thead th {
+	font-weight: normal;
+}
+
+.wpguards-tab-content.home table#backups thead td.subtitle,
+.wpguards-tab-content.home table#backups thead th.subtitle {
+	background: #ddd;
+	color: #629CD1;
+}
+
+.wpguards-tab-content.home table#plans thead td.current,
+.wpguards-tab-content.home table#backups thead td.current {
+	font-size: 1.4em;
+}
+
+.wpguards-tab-content.home table#plans td.price,
+.wpguards-tab-content.home table#backups td.price {
+	text-align: right;
+}
+
+.tab-pc {
+	position: relative;
+	top: -14px;
+	font-weight: bold;
+	font-size: 15px;
+	font-size: 1.5rem;
+	color: #4d4d4d;
+}
+
+.tab-cen1 {
+	color: #ff6002;
+}
+
+.tab-cen2 {
+	color: #629CD1;
+}
+
+.tab-cen1, .tab-cen2 {
+	font-size: 37px;
+	font-size: 2.7rem;
+	font-weight: bold;
+}
+
+.tab-mo {
+	color: #7C7C7C;
+	font-size: 10px;
+	font-size: 1rem;
+	position: relative;
+	left: -24px;
+}
+
+
+.wpguards-tab-content.home .uptime-timeline {
+	width: 100%;
+}
+
+.wpguards-tab-content.home .uptime-timeline .element {
+	display: inline-block;
+	height: 40px;
+
+	transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+}
+
+.wpguards-tab-content.home .uptime-timeline .element:hover {
+	height: 35px;
+}
+
+.wpguards-tab-content.home .uptime-timeline .element.up {
+	/* background-color: #46AB40; */
+	background-color: #2F7C2A;
+}
+
+.wpguards-tab-content.home .uptime-timeline .element.down {
+	/* background-color: #E5563F; */
+	background-color: #FF2020;
+}
+
+.wpguards-tab-content.home .uptime-timeline .element.started {
+	background-color: #629CD1;
+}
+
+.wpguards-tab-content.home .uptime-timeline .element.paused,
+.wpguards-tab-content.home .uptime-timeline .element.undefined {
+	background-color: #ccc;
+}
+
+
+
+
+/* Analytics page */
+
+.wpguards-tab-content.analytics #post-body-content {
+	margin-right: 50%;
+}
+
+.wpguards-tab-content.analytics .inner-sidebar {
+	width: 48%;
+}
+
+.wpguards-tab-content.analytics .postbox.statistics #buttons_div {
+	margin-bottom: 10px;
+}
+
+.wpguards-tab-content.analytics .postbox.statistics .gatable {
+	margin-top: 10px;
+}
+
+
+
+/* Backups page */
+
+.wpguards-tab-content.backups #post-body-content {
+	margin-right: 27%;
+}
+
+/*.wpguards-tab-content.backups table.backups .column-size {
+	width: 80px;
+}
+
+.wpguards-tab-content.backups table.backups .column-restore {
+	width: 80px;
+}*/
+
+.wpguards-tab-content.backups .inner-sidebar {
+	width: 25%;
+}
+
+.wpguards-tab-content.backups #backup-warning {
+	margin-bottom: 15px;
+}
+
+.wpguards-tab-content.backups .inner-sidebar #next_backup {
+	margin-top: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.wpguards-tab-content.backups #progress {
+	position: relative; 
+	height: 20px; 
+	width: 100%;
+	line-height: 20px;
+	font-weight: bold;
+	color: white;
+	background-color: #ccc;
+	text-align: center;
+}
+
+.wpguards-tab-content.backups #progress .progress {
+	position: absolute; 
+	width: 100%;
+	z-index: 9999;
+}
+
+.wpguards-tab-content.backups #progress .bar {
+	height: 100%;
+	position: absolute;
+	left: 0;
+	background-color: #629CD1;
+}
+
+
+
+/* Stats table */
+
+table#tickets-stats,
+table#backups-stats {
+	width: 100%;
+}
+
+table#tickets-stats th,
+table#backups-stats th {
+	padding-right: 10px;
+	width: 40%;
+}
+
+table#tickets-stats th, table#tickets-stats td,
+table#backups-stats th, table#backups-stats td {
+	text-align: left;
+}
+
+table#tickets-stats tr.types td span.type-counter {
+	margin-right: 5px;
+}
+
+table#tickets-stats tr.types td span.type-counter:after {
+	content: ',';
+}
+
+table#tickets-stats tr.types td span.type-counter:nth-last-child(1):after {
+	content: '';
+}
+
+
+
+/* Malware page */
+
+.wpguards-tab-content.malware #post-body-content {
+	margin-right: 30%;
+}
+
+.wpguards-tab-content.malware .inner-sidebar {
+	width: 28%;
+}
+
+.wpguards-tab-content.malware .inner-sidebar #plans {
+	text-align: center;
+	padding: 20px;
+}
+
+.wpguards-tab-content.malware .inner-sidebar #plans .tab-mo {
+	left: 0;
+}
+
+.wpguards-tab-content.malware .inner-sidebar #plans span.or {
+	margin: 0 20px;
+	font-size: 16px;
+	font-weight: bold;
+
+}
+
+.wpguards-tab-content.malware .inner-sidebar #upgrade {
+	text-align: right;
+}
+
+.wpguards-tab-content.malware div.postbox.scan .inside {
+	text-align: center;
+	margin: 25px 0;
+}
+
+.wpguards-tab-content.malware div.postbox.scan .inside a {
+	font-size: 16px;
+	text-decoration: none;
+	font-weight: bold;
+	margin: 20px 0;
+}
+
+.wpguards-tab-content.malware .inner-sidebar #next_scan {
+	margin-top: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+
+/*.wpguards-tab-content.malware table.scans td {
+	text-align: center;
+}*/
+
+.wpguards-tab-content.malware table.scans tr.details td {
+	text-align: left;
+}
+
+.wpguards-tab-content.malware i.green {
+	color: green;
+}
+
+.wpguards-tab-content.malware i.red {
+	color: red;
+}
+
+.wpguards-tab-content.malware tr.details .tabs-list {
+	width: 16%;
+	margin-right: 2%;
+	padding-right: 2%;
+	border-right: 1px solid #e1e1e1;
+	float: left;
+}
+
+.wpguards-tab-content.malware tr.details .single-tab {
+	width: 79%;
+	float: right;
+	padding-bottom: 1em;
+}
+
+.wpguards-tab-content.malware tr.details .single-tab .red {
+	color: red;
+}
+
+
+
+
+
+/* Support page */
+
+.wpguards-tab-content.support div.your-tickets {
+	clear: both;
+}
+
+.wpguards-tab-content.support #post-body-content {
+	margin-right: 30%;
+}
+
+.wpguards-tab-content.support .inner-sidebar {
+	width: 28%;
+}
+
+.wpguards-tab-content.support .inner-sidebar table#unpaid-tickets {
+	width: 100%;
+	border-spacing: 0;
+	margin: 10px 0;
+}
+
+.wpguards-tab-content.support .inner-sidebar table#unpaid-tickets tr.header td {
+	background-color: #ddd;
+}
+
+.wpguards-tab-content.support .inner-sidebar table#unpaid-tickets tr.total td.desc {
+	text-align: right;
+}
+
+.wpguards-tab-content.support .inner-sidebar table#unpaid-tickets td.title {
+	padding-right: 10px;
+}
+
+.wpguards-tab-content.support .inner-sidebar table#unpaid-tickets td.cost,
+.wpguards-tab-content.support .inner-sidebar table#unpaid-tickets td.amount {
+	white-space: nowrap;
+}
+
+.wpguards-tab-content.support .inner-sidebar table#unpaid-tickets td {
+	border-bottom: 1px solid #ccc;
+	padding: 2px;
+}
+
+.wpguards-tab-content.support .inner-sidebar table#unpaid-tickets tr:nth-last-child(1) td {
+	border-bottom: none;
+}
+
+.wpguards-tab-content.support .inner-sidebar #paypal-button {
+	text-align: right;
+}
+
+.wrap .wpguards-tab-content.support form#wpguards-form {
+	/*width: 960px;*/
+}
+
+span.support-type-select {
+	margin-right: 15px;
+}
+
+.wpguards-tab-content span.right {
+	float: right;
+}
+
+.wpguards-tab-content span.required  {
+	color: red;
+}
+
+.wpguards-tab-content table.tickets tr.alternate {
+	height: 50px;
+}
+
+.wpguards-tab-content table.tickets tr.alternate td {
+	vertical-align: middle;
+}
+
+.wpguards-tab-content table.tickets .column-status, .wpguards-tab-content table.tickets .column-type {
+	width: 70px;
+}
+
+.wpguards-tab-content table.tickets .column-subject {
+	width: 45%;
+}
+
+.wpguards-tab-content .legend {
+	margin-top: 1em;
+	font-size: 1.1em;
+}
+
+
+
+/* Tickets page */
+
+.nav-tab-wrapper .tab-ticket {
+	float: right;
+}
+
+.wpguards-tab-content.ticket #post-body-content {
+	margin-right: 40%;
+}
+
+.wpguards-tab-content.ticket .inner-sidebar {
+	width: 38%;
+}
+
+.wpguards-tab-content.ticket .postbox.form {
+	position: fixed;
+	width: 33%;
+}
+
+form#wpguards-comment-form {
+	text-align: right;
+}
+
+.wpguards-tab-content.ticket .postbox.comments table.comments {
+	border-spacing: 0;
+	width: 100%;
+}
+
+.wpguards-tab-content.ticket .postbox.comments tr.comment td {
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0;
+	vertical-align: top;
+}
+
+.wpguards-tab-content.ticket .postbox.comments tr.comment td p {
+	margin: 5px 0;
+}
+
+.wpguards-tab-content.ticket .postbox.comments tr.comment td p.description {
+	margin: 2px 0 5px;
+}
+
+.wpguards-tab-content.ticket .postbox.comments tr.comment:nth-child(1) td {
+	padding: 0 0 10px 0;
+}
+
+.wpguards-tab-content.ticket .postbox.comments tr.comment:nth-last-child(1) td {
+	border-bottom: none;
+	padding: 10px 0 0 0;
+}
+
+.wpguards-tab-content.ticket .postbox.comments tr.comment td.avatar {
+	width: 60px;
+}
+
+.wpguards-tab-content.ticket .postbox.comments tr.comment img {
+	width: 50px;
+	height: 50px;
+}
+
+.wpguards-tab-content.ticket .postbox.comments tr.comment td.content p.attachments {
+	border-top: 1px dashed #ccc;
+	padding-top: 5px;
+	text-align: right;
+}
+
+.wpguards-tab-content.ticket .postbox.comments tr.comment td.content p.attachments span.attachment {
+	margin-left: 10px;
+}
+
+.wpguards-tab-content.ticket .postbox.comments tr.comment td.content p.attachments span.attachment a {
+	display: inline-block;
+}
+
+.wpguards-tab-content.ticket .postbox.comments tr.comment td.content p.attachments i.thumbnail {
+	color: #aaa;
+	font-size: 50px;
+}
+
+.wpguards-tab-content.ticket .postbox.comments tr.comment td.content p.attachments i.thumbnail:hover {
+	color: #bbb;
+}
+
+
+
+/* Settings Page */
+
+.wpguards-tab-content.settings #post-body-content {
+	margin-right: 40%;
+}
+
+.wpguards-tab-content.settings .inner-sidebar {
+	width: 38%;
+}
+
+.wpguards-tab-content.settings .postbox.form .inside h3 {
+	/*border: none;
+	text-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background: none;
+	cursor: default;
+	font-size: inherit;
+	font-weight: bolder;
+	font-family: sans-serif;
+	color: #333;*/
+
+	display: none;
+}
+
+
+
+/* Misc */
+
+#useful-links-list {
+	margin-top: 1em;
+}
+
+.big-alert {
+	width: 100%;
+	text-align: center;
+	font-size: 34px;
+	line-height: 40px;
+	font-weight: bold;
+}
+
+.small-alert {
+	width: 100%;
+	text-align: center;
+	font-size: 26px;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+.small-alert a, .big-alert a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.small-alert.blue, .big-alert.blue {
+	color: #629CD1;
+}
+
+.small-alert.red, .big-alert.red {
+	color: #ff6002;
+}
+
+ul#useful-links-list li {
+	display: inline;
+}
+ul#useful-links-list li a {
+	display: block;
+	float: left;
+	width: 150px;
+	height: 150px;
+	margin: 0 10px 10px 0;
+	padding: 10px;
+}
+
+hr.prop {
+	display: block !important;
+	height: 1px;
+	clear: both;
+	border: none !important;
+	background: none !important;
+}
+#useful-links-list li a {
+	text-decoration: none;
+	color: White;
+	font-weight: bold;
+}
+#useful-links-list li a span {
+	display: block;
+	margin-top: 10px;
+	color: Black;
+	font-weight: lighter;
+}

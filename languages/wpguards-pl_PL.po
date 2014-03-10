@@ -1,0 +1,1173 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPGuards\n"
+"POT-Creation-Date: 2014-02-25 07:48+0100\n"
+"PO-Revision-Date: 2014-02-25 08:24+0100\n"
+"Last-Translator: Jakub Mikita <kuba@wordpressgeeks.co.uk>\n"
+"Language-Team: WordPressGeeks\n"
+"Language: Polish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n:1,2;_n_noop:1,2;_nx:1,2;nx_noop:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../wpguards/functions.php:45
+msgid "Restoring error"
+msgstr "Błąd przywracania"
+
+#: ../wpguards/functions.php:65
+msgid "Wrong noonce. Do you really want to do that?"
+msgstr "Zły noonce. Na pewno chcesz to zrobić?"
+
+#: ../wpguards/functions.php:125
+msgid "Sorry, your nonce did not verify"
+msgstr "Przykro mi, zły noonce"
+
+#: ../wpguards/functions.php:141
+msgid "Subject cannot be blank"
+msgstr "Tytuł nie może być pusty"
+
+#: ../wpguards/functions.php:143
+msgid "Description cannot be blank"
+msgstr "Opis nie może być pusty"
+
+#: ../wpguards/functions.php:154
+msgid "Your ticket was send"
+msgstr "Twoja wiadomość została wysłana"
+
+#: ../wpguards/functions.php:169
+msgid "Comment cannot be blank"
+msgstr "Komentarz nie może być pusty"
+
+#: ../wpguards/functions.php:173
+msgid "Your comment was send"
+msgstr "Twój komentarz został wysłany"
+
+#: ../wpguards/functions.php:203
+msgid "Please provide your API key in order to access this page"
+msgstr "Aby wyświetlić tą stronę podaj klucz API"
+
+#: ../wpguards/functions.php:204
+msgid "Go to the settings tab"
+msgstr "Ustawienia"
+
+#: ../wpguards/functions.php:218
+msgid "new"
+msgstr "nowy"
+
+#: ../wpguards/functions.php:222
+msgid "open"
+msgstr "otwarty"
+
+#: ../wpguards/functions.php:226
+msgid "pending"
+msgstr "oczekuje"
+
+#: ../wpguards/functions.php:230
+msgid "solved"
+msgstr "rozwiązany"
+
+#: ../wpguards/functions.php:234
+msgid "solved - unpaid"
+msgstr "rozwiązany - niezapłacony"
+
+#: ../wpguards/functions.php:238
+msgid "closed"
+msgstr "zamknięty"
+
+#: ../wpguards/functions.php:242
+msgid "problem"
+msgstr "problem"
+
+#: ../wpguards/functions.php:246
+msgid "incident"
+msgstr "incydent"
+
+#: ../wpguards/functions.php:250
+msgid "task"
+msgstr "zadanie"
+
+#: ../wpguards/functions.php:254
+msgid "question"
+msgstr "pytanie"
+
+#: ../wpguards/functions.php:329
+msgid "Thanks for payment"
+msgstr "Dziękujemy za płatność"
+
+#: ../wpguards/functions.php:428
+msgid "day"
+msgid_plural "days"
+msgstr[0] "dzień"
+msgstr[1] "dni"
+msgstr[2] "dni"
+
+#: ../wpguards/functions.php:429
+msgid "hour"
+msgid_plural "hours"
+msgstr[0] "godzina"
+msgstr[1] "godziny"
+msgstr[2] "godzin"
+
+#: ../wpguards/functions.php:430
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] "minuta"
+msgstr[1] "minuty"
+msgstr[2] "minut"
+
+#: ../wpguards/functions.php:431
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] "sekunda"
+msgstr[1] "sekundy"
+msgstr[2] "sekund"
+
+#: ../wpguards/admin/templates/tab_ticket.php:33
+msgid "Submit new comment"
+msgstr "Wyślij nowy komentarz"
+
+#: ../wpguards/admin/templates/tab_ticket.php:44
+#: ../wpguards/core/class_WPGTickets.php:172
+msgid "Submit"
+msgstr "Wyślij"
+
+#: ../wpguards/admin/templates/tab_ticket.php:50
+msgid "This ticket is closed and you can not reply to it."
+msgstr "Wątek jest zamknięty więc nie możesz w nim odpowiedzieć."
+
+#: ../wpguards/admin/templates/tab_wpguards.php:18
+msgid "Overview"
+msgstr "Przegląd"
+
+#: ../wpguards/admin/templates/tab_wpguards_analytics.php:13
+msgid "Statistics"
+msgstr "Statystyki"
+
+#: ../wpguards/admin/templates/tab_wpguards_analytics.php:27
+#: ../wpguards/admin/templates/tab_wpguards_settings.php:11
+#: ../wpguards/core/autoload/class_WPGAdmin.php:216
+#: ../wpguards/core/autoload/class_WPGAdmin.php:217
+#: ../wpguards/core/autoload/class_WPGAdmin.php:265
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: ../wpguards/admin/templates/tab_wpguards_diagnostic.php:13
+msgid "Useful links"
+msgstr "Przydatne linki"
+
+#: ../wpguards/admin/templates/tab_wpguards_diagnostic.php:16
+msgid "Here you can find some useful links to check your WordPress blog."
+msgstr ""
+"Znajdziesz tutaj kilka przydatnych linków do sprawdzenia swojego WordPressa"
+
+#: ../wpguards/admin/templates/tab_wpguards_maintenance.php:14
+#: ../wpguards/core/class_WPGHome.php:220
+#: ../wpguards/core/autoload/class_WPGAdmin.php:261
+msgid "Maintenance"
+msgstr "Konserwacja"
+
+#: ../wpguards/admin/templates/tab_wpguards_settings.php:34
+#: ../wpguards/core/class_WPGBackups.php:105
+#: ../wpguards/core/class_WPGMalware.php:152
+msgid "Informations"
+msgstr "Informacje"
+
+#: ../wpguards/admin/templates/tab_wpguards_settings.php:37
+msgid ""
+"If your server servs gziped content, loader may be not visible. Please be "
+"patient when the plugin pages will be loaded."
+msgstr ""
+"Jeśli twój serwer serwuje gzipowaną treść ikona ładowania może nie być "
+"widoczna. Bądź cierpliwy podczas ładowania stron."
+
+#: ../wpguards/admin/templates/tab_wpguards_settings.php:41
+msgid ""
+"Please restrict the following IP addresses in your Analytics system. Those "
+"are from Uptime Robot and they can increase traffic on your website."
+msgstr ""
+"Dodaj te adresy IP do listy ignorowanych adresów w Twoim systemie statystyk. "
+"Należą one do Uptime Robota i mogą spowodować wzrost odwiedzin na blogu."
+
+#: ../wpguards/admin/templates/tab_wpguards_support.php:18
+msgid "Submit new ticket"
+msgstr "Wyślij nową wiadomość"
+
+#: ../wpguards/admin/templates/tab_wpguards_support.php:37
+msgid "Your tickets"
+msgstr "Twoje wiadomości"
+
+#: ../wpguards/core/class_WPGBackups.php:29
+msgid "You haven't any backups yet"
+msgstr "Nie masz jeszcze żadnych kopii bezpieczeństwa"
+
+#: ../wpguards/core/class_WPGBackups.php:41
+#: ../wpguards/core/class_WPGBackups.php:224
+msgid "Backup"
+msgstr "Kopie bezpieczeństwa"
+
+#: ../wpguards/core/class_WPGBackups.php:42
+#: ../wpguards/core/class_WPGBackups.php:225
+msgid "Total size"
+msgstr "Całkowity rozmiar"
+
+#: ../wpguards/core/class_WPGBackups.php:43
+#: ../wpguards/core/class_WPGBackups.php:228
+#: ../wpguards/core/class_WPGTickets.php:299
+msgid "Created"
+msgstr "Utworzone"
+
+#: ../wpguards/core/class_WPGBackups.php:94
+msgid "Next backup"
+msgstr "Następna kopia bezpieczeństwa"
+
+#: ../wpguards/core/class_WPGBackups.php:124
+#: ../wpguards/core/class_WPGMalware.php:137
+msgid "In"
+msgstr "Za"
+
+#: ../wpguards/core/class_WPGBackups.php:142
+msgid ""
+"On cheap servers there might be a problem with restoring backups due to "
+"timeouts. In this case recommended is to download backup to your hard drive "
+"and upload it manually to the FTP."
+msgstr ""
+"Na tanich serwerach może być problem z przywracaniem kopii bezpieczeństwa ze "
+"względu na limity czasu oczekiwania. W takim przypadku zalecamy ręczne "
+"pobranie kopii bezpieczeństwa na Twój dysk twardy i zaktualizowanie plików "
+"poprzez FTP."
+
+#: ../wpguards/core/class_WPGBackups.php:148
+msgid ""
+"Currently you are using free version of WPGuards. Backups are made on a "
+"weekly basis and they are kept locally."
+msgstr ""
+"Aktualnie używasz darmowej wersji WPGuards. Kopie bezpieczeństwa robione są "
+"co tydzień i przetrzymywane są na Twoim serwerze."
+
+#: ../wpguards/core/class_WPGBackups.php:150
+#: ../wpguards/core/class_WPGBackups.php:156
+#, php-format
+msgid "%sUpgarde your version and do a backup <strong>every day!</strong>%s"
+msgstr ""
+"%sPodwyższ swój plan i rób kopie bezpieczeństwa <strong>każdego dnia!</"
+"strong>%s"
+
+#: ../wpguards/core/class_WPGBackups.php:154
+msgid ""
+"Currently you are using standard version of WPGuards. Backups are made on a "
+"weekly basis and they are kept on the external Dropbox drive."
+msgstr ""
+"Aktualnie używasz standardowej wersji WPGuards. Kopie bezpieczeństwa robione "
+"są co tydzień i przetrzymywane są na zewnętrznym serwerze Dropbox."
+
+#: ../wpguards/core/class_WPGBackups.php:160
+msgid ""
+"Currently you are using premium version of WPGuards. Backups are made on a "
+"daily basis and they are kept on the external Dropbox drive."
+msgstr ""
+"Aktualnie używasz profesjonalnej wersji WPGuards. Kopie bezpieczeństwa "
+"robione są codziennie i przetrzymywane są na zewnętrznym serwerze Dropbox."
+
+#: ../wpguards/core/class_WPGBackups.php:176
+msgid "There is no backups available yet"
+msgstr "Nie ma żadnych dostępnych kopii bezpieczeństwa"
+
+#: ../wpguards/core/class_WPGBackups.php:178
+#: ../wpguards/core/class_WPGHome.php:527
+msgid "Next backup will be made within"
+msgstr "Następna kopia bezpieczeństwa będzie wykonana za"
+
+#: ../wpguards/core/class_WPGBackups.php:206
+msgid ""
+"Backup request has been send. Please wait while your backup is being "
+"restored."
+msgstr ""
+"Proszę czekać. Polecenie przywrócenia kopii bezpieczeństwa zostało wysłane i "
+"kopia jest właśnie przywracana."
+
+#: ../wpguards/core/class_WPGBackups.php:208
+msgid "Backup successfully restored."
+msgstr "Kopia bezpieczeństwa pomyślnie przywrócona."
+
+#: ../wpguards/core/class_WPGBackups.php:210
+msgid "Wrong noonce! Do you really want to do that?"
+msgstr "Zły noonce! Na pewno chcesz to zrobić?"
+
+#: ../wpguards/core/class_WPGBackups.php:226
+msgid "Download"
+msgstr "Pobierz"
+
+#: ../wpguards/core/class_WPGBackups.php:227
+msgid "Restore"
+msgstr "Przywróć"
+
+#: ../wpguards/core/class_WPGBackups.php:268
+msgid "restore"
+msgstr "przywróć"
+
+#: ../wpguards/core/class_WPGBackups.php:302
+msgid "link request"
+msgstr "uzyskaj link"
+
+#: ../wpguards/core/class_WPGBackups.php:308
+msgid "Something goes wrong. Please contact support."
+msgstr "Coś poszło nie tak. Skontaktuj się z pomocą techniczną"
+
+#: ../wpguards/core/class_WPGBackups.php:312
+msgid "download"
+msgstr "pobierz"
+
+#: ../wpguards/core/class_WPGBackups.php:314
+#, php-format
+msgid "expires in %s"
+msgstr "wygasa za %s"
+
+#: ../wpguards/core/class_WPGBackups.php:407
+#: ../wpguards/core/class_WPGTickets.php:666
+#: ../wpguards/core/class_WPGTickets.php:669
+#: ../wpguards/core/class_WPGTickets.php:676
+msgid "n/a"
+msgstr "n/d"
+
+#: ../wpguards/core/class_WPGBackups.php:430
+msgid "Backup succefully restored."
+msgstr "Kopia bezpieczeństwa pomyślnie odzyskana."
+
+#: ../wpguards/core/class_WPGBackups.php:435
+msgid "Backup restoring error:"
+msgstr "Błąd podczas odzyskiwania kopii bezpieczeństwa:"
+
+#: ../wpguards/core/class_WPGDiagnostic.php:33
+msgid "Respelt spell checker"
+msgstr "Respelt - sprawdzanie pisowni"
+
+#: ../wpguards/core/class_WPGDiagnostic.php:35
+msgid "Check the spelling on your website with this simple tool."
+msgstr "Sprawdź tym prostym narzędziem ortografię na swojej stronie (EN)."
+
+#: ../wpguards/core/class_WPGDiagnostic.php:47
+msgid "Page loading time"
+msgstr "Czas ładowania strony"
+
+#: ../wpguards/core/class_WPGDiagnostic.php:49
+msgid ""
+"Your website is slow? Check why! With this tool you'l get informations about "
+"the server requests and useful tips."
+msgstr ""
+"Twoja strona jest wolna? Zobacz dlaczego! Dzięki temu narzędziu otrzymasz "
+"inforacje o Twoim serwerze oraz pomocne wskazówki."
+
+#: ../wpguards/core/class_WPGDiagnostic.php:62
+msgid "Validate HTML"
+msgstr "Waliduj HTML"
+
+#: ../wpguards/core/class_WPGDiagnostic.php:64
+msgid "Google like clean websites so check your HTML sytax with w3c's tool."
+msgstr ""
+"Google lubi zadbane strony więc sprawdź swój kod HTML tym narzędziem od W3C."
+
+#: ../wpguards/core/class_WPGDiagnostic.php:77
+msgid "Broken link checker"
+msgstr "Sprawdzanie błędnych linków"
+
+#: ../wpguards/core/class_WPGDiagnostic.php:79
+msgid "Still getting 404 pages? Check broken links on your website."
+msgstr ""
+"Ciągle otrzymujesz strony 404? Sprawdź które linki na Twojej stronie "
+"prowadzą do nikąd."
+
+#: ../wpguards/core/class_WPGDiagnostic.php:92
+msgid "Google PageSpeed Insights"
+msgstr "Statystyki Google PageSpeed"
+
+#: ../wpguards/core/class_WPGDiagnostic.php:94
+msgid ""
+"Site performace testing tool from Google. Get some tips and make your "
+"website faster!"
+msgstr ""
+"Sprawdzanie wydajności strony od Google. Dowiedz się jak przyspieszyć swoją "
+"stronę."
+
+#: ../wpguards/core/class_WPGDiagnostic.php:155
+msgid "up all time"
+msgstr "czasu OK"
+
+#: ../wpguards/core/class_WPGDiagnostic.php:156
+msgid "up last month"
+msgstr "czasu OK w ostatnim miesiącu"
+
+#: ../wpguards/core/class_WPGDiagnostic.php:158
+msgid "Recorded events"
+msgstr "Zdarzenia"
+
+#: ../wpguards/core/class_WPGDiagnostic.php:178
+msgid "Monitor is paused"
+msgstr "Monitor jest zapauzowany"
+
+#: ../wpguards/core/class_WPGDiagnostic.php:182
+msgid "Your website is not checked yet"
+msgstr "Twoja strona nie została jeszcze sprawdzona"
+
+#: ../wpguards/core/class_WPGDiagnostic.php:186
+msgid "Your website is up"
+msgstr "Twoja strona działa"
+
+#: ../wpguards/core/class_WPGDiagnostic.php:190
+msgid "Your website seems to be down"
+msgstr "Twoja strona wydaje się nie działać"
+
+#: ../wpguards/core/class_WPGDiagnostic.php:194
+msgid "Your website is down"
+msgstr "Twoja strona nie działa"
+
+#: ../wpguards/core/class_WPGHome.php:31
+msgid "Your current plan"
+msgstr "Twój obecny plan"
+
+#: ../wpguards/core/class_WPGHome.php:52
+msgid "Upgrade your plan"
+msgstr "Ulepsz swój plan"
+
+#: ../wpguards/core/class_WPGHome.php:68
+#: ../wpguards/core/autoload/class_WPGDashboard.php:158
+msgid "News"
+msgstr "Nowości"
+
+#: ../wpguards/core/class_WPGHome.php:98
+msgid "Feature"
+msgstr "Opcja"
+
+#: ../wpguards/core/class_WPGHome.php:99
+msgid "Value"
+msgstr "Wartość"
+
+#: ../wpguards/core/class_WPGHome.php:113
+#: ../wpguards/core/autoload/class_WPGAdmin.php:171
+#: ../wpguards/core/autoload/class_WPGAdmin.php:172
+#: ../wpguards/core/autoload/class_WPGAdmin.php:260
+#: ../wpguards/core/autoload/class_WPGDashboard.php:266
+msgid "Backups"
+msgstr "Kopie bezpieczeństwa"
+
+#: ../wpguards/core/class_WPGHome.php:117
+#: ../wpguards/core/class_WPGTickets.php:125
+#: ../wpguards/core/class_WPGTickets.php:296
+msgid "Type"
+msgstr "Typ"
+
+#: ../wpguards/core/class_WPGHome.php:118
+msgid "Period"
+msgstr "Harmonogram"
+
+#: ../wpguards/core/class_WPGHome.php:119
+msgid "Stored backups"
+msgstr "Przetrzymywane kopie"
+
+#: ../wpguards/core/class_WPGHome.php:144
+msgid "daily"
+msgstr "dzienny"
+
+#: ../wpguards/core/class_WPGHome.php:145
+msgid "weekly"
+msgstr "tygodniowy"
+
+#: ../wpguards/core/class_WPGHome.php:146
+msgid "server"
+msgstr "Serwer"
+
+#: ../wpguards/core/class_WPGHome.php:147
+msgid "dropbox"
+msgstr "Dropbox"
+
+#: ../wpguards/core/class_WPGHome.php:162
+msgid "Security monitoring"
+msgstr "Monitor zagrożeń"
+
+#: ../wpguards/core/class_WPGHome.php:165
+msgid "Automatic scan"
+msgstr "Automatyczne skanowanie"
+
+#: ../wpguards/core/class_WPGHome.php:167
+#, php-format
+msgid "every %d day"
+msgid_plural "every %d days"
+msgstr[0] "co %d dni"
+msgstr[1] "co %d dni"
+msgstr[2] "co %d dni"
+
+#: ../wpguards/core/class_WPGHome.php:169
+#: ../wpguards/core/class_WPGMalware.php:161
+msgid "Manual scan"
+msgstr "Skanowanie ręczne"
+
+#: ../wpguards/core/class_WPGHome.php:173
+msgid "malvare removal at extra charge"
+msgstr "usunięcie malware za dodatkową opłatą"
+
+#: ../wpguards/core/class_WPGHome.php:174
+msgid "malvare removal included"
+msgstr "usunięcie malware w cenie"
+
+#: ../wpguards/core/class_WPGHome.php:180
+msgid "Theme and plugin updates"
+msgstr "Aktualizacja wtyczek i motywów"
+
+#: ../wpguards/core/class_WPGHome.php:182
+msgid "Yes, monthly"
+msgstr "Tak, co miesiąc"
+
+#: ../wpguards/core/class_WPGHome.php:183
+#: ../wpguards/core/class_WPGHome.php:191
+#: ../wpguards/core/class_WPGHome.php:199
+#: ../wpguards/core/class_WPGHome.php:207
+#: ../wpguards/core/class_WPGHome.php:215
+#: ../wpguards/core/class_WPGHome.php:222
+msgid "No"
+msgstr "Nie"
+
+#: ../wpguards/core/class_WPGHome.php:188
+msgid "Database Optimization"
+msgstr "Optymalizacja bazy danych"
+
+#: ../wpguards/core/class_WPGHome.php:190
+#: ../wpguards/core/class_WPGHome.php:198
+#: ../wpguards/core/class_WPGHome.php:206
+#: ../wpguards/core/class_WPGHome.php:214
+msgid "Yes"
+msgstr "Tak"
+
+#: ../wpguards/core/class_WPGHome.php:196
+msgid "Uptime Monitoring"
+msgstr "Monitor działania strony"
+
+#: ../wpguards/core/class_WPGHome.php:204
+msgid "Google Analytics"
+msgstr "Google Analytics"
+
+#: ../wpguards/core/class_WPGHome.php:212
+msgid "Website diagnostic tools"
+msgstr "Narzędzia diagnostyczne"
+
+#: ../wpguards/core/class_WPGHome.php:226
+msgid "monthly"
+msgstr "co miesiąc"
+
+#: ../wpguards/core/class_WPGHome.php:227
+msgid "annualy"
+msgstr "co rok"
+
+#: ../wpguards/core/class_WPGHome.php:233
+msgid "Online support"
+msgstr "Pomoc online"
+
+#: ../wpguards/core/class_WPGHome.php:235
+msgid "per hour"
+msgstr "za godzinę"
+
+#: ../wpguards/core/class_WPGHome.php:249
+#: ../wpguards/core/class_WPGMalware.php:321
+msgid "General"
+msgstr "Ogólne"
+
+#: ../wpguards/core/class_WPGHome.php:253
+msgid "Tickets statistics"
+msgstr "Statystyki pomocy technicznej"
+
+#: ../wpguards/core/class_WPGHome.php:253
+msgid "Please go to the Support tab to refresh those statistics"
+msgstr "Odwiedź zakładkę Pomoc techniczna aby odświeżyć statystyki"
+
+#: ../wpguards/core/class_WPGHome.php:257
+msgid "Backups statistics"
+msgstr "Statystyki kopii bezpieczeństwa"
+
+#: ../wpguards/core/class_WPGHome.php:257
+msgid "Please go to the Backups tab to refresh those statistics"
+msgstr "Odwiedź zakładkę Kopie bezpieczeństwa aby odświeżyć statystyki"
+
+#: ../wpguards/core/class_WPGHome.php:261
+msgid "Uptime Monitor"
+msgstr "Monitor strony"
+
+#: ../wpguards/core/class_WPGHome.php:273
+#, php-format
+msgid "Version: %s"
+msgstr "Wersja: %s"
+
+#: ../wpguards/core/class_WPGHome.php:276
+#, php-format
+msgid "Plan: %s"
+msgstr "Plan: %s"
+
+#: ../wpguards/core/class_WPGHome.php:277
+#: ../wpguards/core/class_WPGMalware.php:98
+msgid "Upgrade"
+msgstr "Ulepsz plan"
+
+#: ../wpguards/core/class_WPGHome.php:281
+#, php-format
+msgid "Plan expiration date: %s"
+msgstr "Data wygaśnięcia planu: %s"
+
+#: ../wpguards/core/class_WPGHome.php:294
+msgid "unexpired"
+msgstr "niewygasający"
+
+#: ../wpguards/core/class_WPGHome.php:296
+msgid "in a few minutes"
+msgstr "za kilka minut"
+
+#: ../wpguards/core/class_WPGHome.php:300
+#, php-format
+msgid "%d day left"
+msgid_plural "%d days left"
+msgstr[0] "pozostał %d dzień"
+msgstr[1] "pozostały %d dni"
+msgstr[2] "pozostało %d dni"
+
+#: ../wpguards/core/class_WPGHome.php:300
+msgid "today at"
+msgstr "dzisiaj o"
+
+#: ../wpguards/core/class_WPGHome.php:440
+msgid "Sent tickets"
+msgstr "Wysłane wiadomości"
+
+#: ../wpguards/core/class_WPGHome.php:452
+msgid "Average solving time"
+msgstr "Średni czas rozwiazania problemu"
+
+#: ../wpguards/core/class_WPGHome.php:464
+msgid "Average time spent on ticket"
+msgstr "Średni czas poświęcony na problem"
+
+#: ../wpguards/core/class_WPGHome.php:476
+msgid "Types of tickets"
+msgstr "Typy wiadomości"
+
+#: ../wpguards/core/class_WPGHome.php:480
+#, php-format
+msgid "%d "
+msgid_plural "%d "
+msgstr[0] "%d"
+msgstr[1] "%d"
+msgstr[2] "%d"
+
+#: ../wpguards/core/class_WPGHome.php:498
+msgid "Average backup size"
+msgstr "Średni rozmiar kopii bezpieczeństwa"
+
+#: ../wpguards/core/class_WPGHome.php:510
+msgid "Available backups"
+msgstr "Dostępne kopie bezpieczeństwa"
+
+#: ../wpguards/core/class_WPGHome.php:523
+msgid "Refresh statistics by accessing the Backups tab"
+msgstr "Odśwież statystyki poprzed otworzenie zakładki Kopie bezpieczeństwa"
+
+#: ../wpguards/core/class_WPGInstall.php:53
+#, php-format
+msgid "Insert WPGuards API key %shere%s"
+msgstr "Wpisz %stutaj%s klucz API do wtyczki WPGuards"
+
+#: ../wpguards/core/class_WPGMalware.php:83
+msgid "Scan your site"
+msgstr "Skanuj swoją witrynę"
+
+#: ../wpguards/core/class_WPGMalware.php:100
+msgid "Get now higher plan to automaticly scan your site every"
+msgstr "Ulepsz swój plan, aby automatycznie skanować stronę"
+
+#: ../wpguards/core/class_WPGMalware.php:103
+#: ../wpguards/core/class_WPGMalware.php:105
+msgid "hours"
+msgstr "godzin"
+
+#: ../wpguards/core/class_WPGMalware.php:109
+msgid "Upgrade now"
+msgstr "Ulepsz teraz"
+
+#: ../wpguards/core/class_WPGMalware.php:124
+msgid "Next scan"
+msgstr "Następny skan"
+
+#: ../wpguards/core/class_WPGMalware.php:132
+msgid "Now"
+msgstr "Teraz"
+
+#: ../wpguards/core/class_WPGMalware.php:155
+msgid "There are stored 10 last scans."
+msgstr "Przetrzymywane jest 10 ostatnich skanów."
+
+#: ../wpguards/core/class_WPGMalware.php:178
+msgid "There is no scans available yet"
+msgstr "Nie ma na razie dostępnych skanów"
+
+#: ../wpguards/core/class_WPGMalware.php:180
+msgid "Next scan will be made within"
+msgstr "Następny skan wykonany będzie za"
+
+#: ../wpguards/core/class_WPGMalware.php:209
+msgid "Scan"
+msgstr "Skan"
+
+#: ../wpguards/core/class_WPGMalware.php:210
+#: ../wpguards/core/class_WPGMalware.php:453
+msgid "Blacklisted"
+msgstr "Na czarnej liście"
+
+#: ../wpguards/core/class_WPGMalware.php:211
+#: ../wpguards/core/class_WPGMalware.php:324
+#: ../wpguards/core/class_WPGMalware.php:471
+#: ../wpguards/core/autoload/class_WPGAdmin.php:189
+#: ../wpguards/core/autoload/class_WPGAdmin.php:190
+#: ../wpguards/core/autoload/class_WPGAdmin.php:262
+msgid "Malware"
+msgstr "Malware"
+
+#: ../wpguards/core/class_WPGMalware.php:212
+msgid "Malicious javascript"
+msgstr "Podejrzany javascript"
+
+#: ../wpguards/core/class_WPGMalware.php:213
+msgid "Malicious iframes"
+msgstr "Podejrzane ramki iframe"
+
+#: ../wpguards/core/class_WPGMalware.php:214
+msgid "Suspicious redirections"
+msgstr "Podejrzane przekierowania"
+
+#: ../wpguards/core/class_WPGMalware.php:215
+msgid "Spam"
+msgstr "Spam"
+
+#: ../wpguards/core/class_WPGMalware.php:237
+msgid "View this scan"
+msgstr "Zobacz skan"
+
+#: ../wpguards/core/class_WPGMalware.php:237
+msgid "Details"
+msgstr "Szczegóły"
+
+#: ../wpguards/core/class_WPGMalware.php:238
+msgid "Remove this scan"
+msgstr "Usuń skan"
+
+#: ../wpguards/core/class_WPGMalware.php:238
+msgid "Remove"
+msgstr "Usuń"
+
+#: ../wpguards/core/class_WPGMalware.php:322
+msgid "Links"
+msgstr "Linki"
+
+#: ../wpguards/core/class_WPGMalware.php:323
+#: ../wpguards/core/class_WPGMalware.php:444
+msgid "Blacklists"
+msgstr "Czarne listy"
+
+#: ../wpguards/core/class_WPGMalware.php:360
+msgid "Website info"
+msgstr "Informacje o stronie"
+
+#: ../wpguards/core/class_WPGMalware.php:361
+msgid "Site"
+msgstr "Strona"
+
+#: ../wpguards/core/class_WPGMalware.php:362
+msgid "Domain"
+msgstr "Domena"
+
+#: ../wpguards/core/class_WPGMalware.php:363
+msgid "IP"
+msgstr "IP"
+
+#: ../wpguards/core/class_WPGMalware.php:365
+msgid "System"
+msgstr "System"
+
+#: ../wpguards/core/class_WPGMalware.php:375
+msgid "Application informations"
+msgstr "Informacje o aplikacji"
+
+#: ../wpguards/core/class_WPGMalware.php:390
+msgid "Application version"
+msgstr "Wersja aplikacji"
+
+#: ../wpguards/core/class_WPGMalware.php:399
+msgid "Application warning"
+msgstr "Ostrzeżenie"
+
+#: ../wpguards/core/class_WPGMalware.php:417
+msgid "URLs found"
+msgstr "Znalezione adresy"
+
+#: ../wpguards/core/class_WPGMalware.php:426
+msgid "Javascript found"
+msgstr "Znalezione skrypty javascript"
+
+#: ../wpguards/core/class_WPGTickets.php:129
+msgid "Problem"
+msgstr "Problem"
+
+#: ../wpguards/core/class_WPGTickets.php:134
+msgid "Incident"
+msgstr "Incydent"
+
+#: ../wpguards/core/class_WPGTickets.php:139
+msgid "Question"
+msgstr "Pytanie"
+
+#: ../wpguards/core/class_WPGTickets.php:144
+msgid "Task"
+msgstr "Zadanie"
+
+#: ../wpguards/core/class_WPGTickets.php:151
+#: ../wpguards/core/class_WPGTickets.php:295
+msgid "Subject"
+msgstr "Temat"
+
+#: ../wpguards/core/class_WPGTickets.php:157
+msgid "Description"
+msgstr "Opis"
+
+#: ../wpguards/core/class_WPGTickets.php:158
+msgid "Please, be specific"
+msgstr "Proszę dokładnie opisać problem"
+
+#: ../wpguards/core/class_WPGTickets.php:163
+msgid "required"
+msgstr "wymagane"
+
+#: ../wpguards/core/class_WPGTickets.php:189
+msgid "Legend"
+msgstr "Legenda"
+
+#: ../wpguards/core/class_WPGTickets.php:194
+msgid "unpaid"
+msgstr "nieopłacone"
+
+#: ../wpguards/core/class_WPGTickets.php:213
+#: ../wpguards/core/class_WPGTickets.php:221
+msgid "You havn't any tickets yet."
+msgstr "Nie posiadasz na razie żadnych wysłanych wiadomości."
+
+#: ../wpguards/core/class_WPGTickets.php:215
+msgid "Tickets error"
+msgstr "Błąd wiadomości"
+
+#: ../wpguards/core/class_WPGTickets.php:271
+msgid "support"
+msgstr "pomoc techniczna"
+
+#: ../wpguards/core/class_WPGTickets.php:294
+msgid "Status"
+msgstr "Status"
+
+#: ../wpguards/core/class_WPGTickets.php:297
+msgid "Time spent (h:m)"
+msgstr "Spędzony czas (g:m)"
+
+#: ../wpguards/core/class_WPGTickets.php:298
+#: ../wpguards/core/class_WPGTickets.php:604
+msgid "Cost"
+msgstr "Koszt"
+
+#: ../wpguards/core/class_WPGTickets.php:300
+msgid "Updated"
+msgstr "Zaktualizowany"
+
+#: ../wpguards/core/class_WPGTickets.php:451
+msgid "Please, pay for the WPGuards support"
+msgstr "Proszę zapłacić za pomoc techniczną WPGuards"
+
+#: ../wpguards/core/class_WPGTickets.php:543
+msgid "Please, pay your bill"
+msgstr "Zapłać za pomoc"
+
+#: ../wpguards/core/class_WPGTickets.php:546
+msgid "You have some unpaid tickets"
+msgstr "Masz nieopłacone wiadomości"
+
+#: ../wpguards/core/class_WPGTickets.php:603
+msgid "Title"
+msgstr "Tytuł"
+
+#: ../wpguards/core/class_WPGTickets.php:617
+msgid "TOTAL"
+msgstr "SUMA"
+
+#: ../wpguards/core/autoload/class_WPGAdmin.php:139
+#: ../wpguards/core/autoload/class_WPGAdmin.php:255
+#: ../wpguards/core/autoload/class_WPGDashboard.php:34
+msgid "WPGuards"
+msgstr "WPGuards"
+
+#: ../wpguards/core/autoload/class_WPGAdmin.php:149
+#: ../wpguards/core/autoload/class_WPGAdmin.php:150
+#: ../wpguards/core/autoload/class_WPGAdmin.php:256
+msgid "Home"
+msgstr "WPGuards"
+
+#: ../wpguards/core/autoload/class_WPGAdmin.php:160
+#: ../wpguards/core/autoload/class_WPGAdmin.php:161
+#: ../wpguards/core/autoload/class_WPGAdmin.php:258
+#: ../wpguards/core/autoload/class_WPGDashboard.php:240
+msgid "Analytics"
+msgstr "Statystyki"
+
+#: ../wpguards/core/autoload/class_WPGAdmin.php:198
+#: ../wpguards/core/autoload/class_WPGAdmin.php:199
+#: ../wpguards/core/autoload/class_WPGAdmin.php:263
+#: ../wpguards/core/autoload/class_WPGDashboard.php:210
+msgid "Support"
+msgstr "Pomoc techniczna"
+
+#: ../wpguards/core/autoload/class_WPGAdmin.php:207
+#: ../wpguards/core/autoload/class_WPGAdmin.php:208
+#: ../wpguards/core/autoload/class_WPGAdmin.php:264
+msgid "Diagnostic tools"
+msgstr "Narzędzia diagnostyczne"
+
+#: ../wpguards/core/autoload/class_WPGAdmin.php:329
+msgid "General Settings"
+msgstr "Ustawienia ogólne"
+
+#: ../wpguards/core/autoload/class_WPGAdmin.php:336
+msgid "API key"
+msgstr "Klucz API"
+
+#: ../wpguards/core/autoload/class_WPGAdmin.php:378
+#, php-format
+msgid ""
+"If you didn't get an API key yet, you can %sregister free account%s to get "
+"one."
+msgstr ""
+"Jeśli jeszcze nie masz swojego klucza API %szarejestruj darmowe konto%s, aby "
+"go otrzymać"
+
+#: ../wpguards/core/autoload/class_WPGAdmin.php:397
+#, php-format
+msgid ""
+"By providing Analytics Access Code you'll enable integrated Google Analytics "
+"Dashboard plugin by Alin Marcu. %sGet Access Code%s."
+msgstr ""
+"Podanie klucza dostępu do Google Analytics spowoduje właczenie zintegrowanej "
+"wtyczki Google Analytics Dashboard autorstwa Alin Marcu. %sOtrzymaj kod "
+"dostępu%s."
+
+#: ../wpguards/core/autoload/class_WPGAdmin.php:399
+msgid "Google Analytics Dashboard plugin by Alin Marcu integrated"
+msgstr "Wtyczka Google Analytics Dashboard autorstwa Alin Marcu zintegrowana"
+
+#: ../wpguards/core/autoload/class_WPGAdmin.php:458
+msgid "API Key correct"
+msgstr "Klucz API poprawny"
+
+#: ../wpguards/core/autoload/class_WPGAdmin.php:469
+msgid "WPGuards added to remote framework."
+msgstr "WPGuards dodany do zdalnego frameworka."
+
+#: ../wpguards/core/autoload/class_WPGDashboard.php:83
+msgid "Display settings"
+msgstr "Pokaż ustawienia"
+
+#: ../wpguards/core/autoload/class_WPGDashboard.php:87
+msgid "Display news"
+msgstr "Pokaż nowości"
+
+#: ../wpguards/core/autoload/class_WPGDashboard.php:92
+msgid "Display support"
+msgstr "Pokaż pomoc techniczną"
+
+#: ../wpguards/core/autoload/class_WPGDashboard.php:97
+msgid "Display analytics"
+msgstr "Pokaż statystyki"
+
+#: ../wpguards/core/autoload/class_WPGDashboard.php:101
+msgid "Display backups"
+msgstr "Pokaż kopie bezpieczeństwa"
+
+#: ../wpguards/core/autoload/class_WPGDashboard.php:129
+msgid "See more"
+msgstr "Zobacz więcej"
+
+#: ../wpguards/core/autoload/class_WPGDashboard.php:168
+msgid "No item"
+msgstr "Brak"
+
+#: ../wpguards/core/autoload/class_WPGDashboard.php:173
+msgid "ago"
+msgstr "temu"
+
+#: ../wpguards/core/autoload/class_WPGDashboard.php:218
+msgid "Send new ticket"
+msgstr "Wyślij nową wiadomość"
+
+#: ../wpguards/core/autoload/class_WPGDashboard.php:276
+msgid "Download or restore"
+msgstr "Pobierz lub przywróć"
+
+#: ../wpguards/iwp-client/backup.class.php:1232
+msgid "Could not copy file."
+msgstr "Nie można skopiować pliku."
+
+#: ../wpguards/iwp-client/backup.class.php:1237
+msgid "Could not create directory."
+msgstr "Nie można utworzyć katalogu."
+
+#: ../wpguards/iwp-client/addons/wp_optimize/optimize.class.php:50
+msgid " post revisions deleted<br>"
+msgstr "Rewizje postów usunięte<br>"
+
+#: ../wpguards/iwp-client/addons/wp_optimize/optimize.class.php:58
+msgid " auto drafts deleted<br>"
+msgstr "Automatyczne szkice usunięte<br>"
+
+#: ../wpguards/iwp-client/addons/wp_optimize/optimize.class.php:65
+msgid " spam comments deleted<br>"
+msgstr "Spam usunięty<br>"
+
+#: ../wpguards/iwp-client/addons/wp_optimize/optimize.class.php:71
+msgid " unapproved comments deleted<br>"
+msgstr "Niezatwierdzone komentarze usunięte<br>"
+
+#: ../wpguards/iwp-client/addons/wp_optimize/optimize.class.php:80
+msgid "NO Actions Taken<br>"
+msgstr "Nic nie wykonano<br>"
+
+#~ msgid "down"
+#~ msgstr "nie działała"
+
+#~ msgid "up"
+#~ msgstr "działała"
+
+#~ msgid "started"
+#~ msgstr "włączony"
+
+#~ msgid "paused"
+#~ msgstr "zapauzowany"
+
+#~ msgid "undefined"
+#~ msgstr "nieokreślono"
+
+#~ msgid "days"
+#~ msgstr "dni"
+
+#~ msgid "minutes"
+#~ msgstr "minut"
+
+#~ msgid "seconds"
+#~ msgstr "sekund"
+
+#~ msgid "Help on Wordpress Forum"
+#~ msgstr "Pomoc na forum WordPress"
+
+#~ msgid "Send a ticket"
+#~ msgstr "Wyślij wiadomość"
+
+#~ msgid "Google Analytics Dashboard"
+#~ msgstr "Google Analytics Dashboard"
+
+#~ msgid "GA Dashboard"
+#~ msgstr "GA Dashboard"
+
+#~ msgid "Views vs UniqueViews"
+#~ msgstr "Odwiedziny kontra odwiedziny unikalne"
+
+#~ msgid "Date"
+#~ msgstr "Dara"
+
+#~ msgid "Views"
+#~ msgstr "Odsłony"
+
+#~ msgid "UniqueViews"
+#~ msgstr "Unikalne odsłony"
+
+#~ msgid "Top Searches"
+#~ msgstr "Najpopularniejsze wyszukiwania"
+
+#~ msgid "Visits"
+#~ msgstr "Wizyty"
+
+#~ msgid "Ask an admin to authorize this Application"
+#~ msgstr "Spytaj admina o autoryzację"
+
+#~ msgid "Access Code:"
+#~ msgstr "Kod dostępu:"
+
+#~ msgid "Get Access Code"
+#~ msgstr "Otrzymaj kod dostępu"
+
+#~ msgid "Save Access Code"
+#~ msgstr "Zapisz"
+
+#~ msgid "Ask an admin to asign a Google Analytics Profile"
+#~ msgstr "Zapytaj admina o przypisanie profilu Google Analytics"
+
+#~ msgid "Visitors"
+#~ msgstr "Odwiedzający"
+
+#~ msgid "Page Views"
+#~ msgstr "Odsłony"
+
+#~ msgid "Bounce Rate"
+#~ msgstr "Współczynnik odrzuceń"
+
+#~ msgid "Organic Searches"
+#~ msgstr "Wyszukiwanie organiczne"
+
+#~ msgid "Country/City"
+#~ msgstr "Państwo/Miasto"
+
+#~ msgid "Source"
+#~ msgstr "Źródło"
+
+#~ msgid "Traffic Sources"
+#~ msgstr "Źródła ruchu"
+
+#~ msgid "New vs. Returning"
+#~ msgstr "Nowi konta powracający"
+
+#~ msgid "Top Pages"
+#~ msgstr "Najlepsze strony"
+
+#~ msgid "Top Referrers"
+#~ msgstr "Najlepsze źródła"
+
+#~ msgid "Today"
+#~ msgstr "Dzisiaj"
+
+#~ msgid "Yesterday"
+#~ msgstr "Wczoraj"
+
+#~ msgid "Last 30 days"
+#~ msgstr "Ostatni miesiąc"
+
+#~ msgid "Last 90 days"
+#~ msgstr "Ostatnie 3 miesiące"
+
+#~ msgid "Visits:"
+#~ msgstr "Wizyty:"
+
+#~ msgid "Visitors:"
+#~ msgstr "Odwiedzających:"
+
+#~ msgid "Page Views:"
+#~ msgstr "Odsłony:"
+
+#~ msgid "Bounce Rate:"
+#~ msgstr "Współczynnik odrzuceń:"
+
+#~ msgid "Organic Search:"
+#~ msgstr "Wyszukiwania organiczne:"
+
+#~ msgid "Pages per Visit:"
+#~ msgstr "Strony na wizytę:"
