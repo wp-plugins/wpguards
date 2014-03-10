@@ -3,7 +3,7 @@
  * Plugin Name: WPGuards
  * Plugin URI: http://wpguards.com
  * Description: WordPress Support and Maintenance on Autopilot
- * Version: 1.1.1
+ * Version: 1.2.0
  * Author: WordPressGeeks
  * Author URI: http://wordpressgeeks.co.uk
  * License: GPL2
