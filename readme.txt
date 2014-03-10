@@ -14,21 +14,19 @@ Automated Security and Support plugin to keep your website fully protected. Back
 
 WPGuards plugin is the complete solution for everyone who have a WordPress blog. We'll made automatic backups of your website and provide proffessional support so you can ask us about anything anytime directly from your WordPress administration panel. Also we provide the Uptime monitoring, several diagnostic tools, the Security monitoring and more
 
-**Features**
-
-Automated Backups
+**Automated Backups**
 Your site was attacked and you lost your files? Or maybe you accidentally deleted some of your photos? No matter how big problem you have, you can trust our system. Files on your FTP server and entire database can be restored just by 1 click in the WordPress Administration Panel. And if you lost your WordPress website there is complete backup waiting for you on the Dropbox account.
 
-Uptime Monitoring
+**Uptime Monitoring**
 Do you like to know what's going on with your website? Is 99,9% uptime declared by your provider true? You can easily find it out! Your website will be automatically added to the Uptime Monitor. And what if your website will be down? You'll get email notification right away!
 
-Awesome Support
+**Awesome Support**
 WordPress is our life so you can be sure we know how to help you. There are few people waiting for hearing from you. By WPGuards plugin we'll automatically get all needed informations for fast support. You don't have to search for the version of WordPress you're using - let us do the work.
 
-Security Scans
+**Security Scans**
 WPGuards plugin also provide advanced security scan system which will scan your website every day and you can sleep easy. We'll let you know.
 
-Plugin Updates
+**Plugin Updates**
 WordPress auto-updates seems not to work? No problem, we'll update your WordPress, Themes, Plugins and Translations manually. We'll also check if everything is ok with your website after updates. That means no more PHP errors and no lost visitors.
 
 **There are also premium version of the plugin**
@@ -38,7 +36,7 @@ Please go to [wpguards.com](http://wpguards.com) to see detailed plans and featu
 
 == Installation ==
 
-1. Upload 'wpguards.php' to the '/wp-content/plugins/' directory or install it with WordPress' automatic plugin installer
+1. Upload 'wpguards.zip' to the '/wp-content/plugins/' directory or install it with WordPress' automatic plugin installer
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Register at [wpguards.com](https://api.wpguards.com/register) your free account
 4. Provide your API key on the plugin's Settings tab
