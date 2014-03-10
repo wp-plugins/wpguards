@@ -8,7 +8,7 @@ Stable tag: 1.1.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Automated Security and Support plugin to keep your website fully protected. Backps, malware scans and diagnostics included.
+Automated Security and Support plugin to keep your website fully protected. Backups, malware scans and diagnostics included.
 
 == Description ==
 
