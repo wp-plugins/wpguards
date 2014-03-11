@@ -38,7 +38,7 @@ Please go to [wpguards.com](http://wpguards.com) to see detailed plans and featu
 
 == Installation ==
 
-=[Detailed installation instruction [PDF]](http://wpguards.com/downloads/WPGuards-Installation-and-General-Overview.pdf)=
+[Detailed installation instruction [PDF]](http://wpguards.com/downloads/WPGuards-Installation-and-General-Overview.pdf)
 
 1. Upload 'wpguards.zip' to the '/wp-content/plugins/' directory or install it with WordPress' automatic plugin installer
 2. Activate the plugin through the 'Plugins' menu in WordPress
