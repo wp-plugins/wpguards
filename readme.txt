@@ -43,6 +43,8 @@ Please go to [wpguards.com](http://wpguards.com) to see detailed plans and featu
 3. Register at [wpguards.com](https://api.wpguards.com/register) your free account
 4. Provide your API key on the plugin's Settings tab
 
+[Client Panel](https://api.wpguards.com/panel) | [Official website](http://wpguards.com/) | [Detailed installation instruction [PDF]](http://wpguards.com/downloads/WPGuards-Installation-and-General-Overview.pdf)
+
 == Frequently Asked Questions ==
 
 = Why you want me to register an account? =
