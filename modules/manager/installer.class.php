@@ -51,7 +51,6 @@ class IWP_MMB_Installer extends IWP_MMB_Core
     
     function install_remote_file($params)
     {
-				
         global $wp_filesystem;
         extract($params);
         
@@ -91,15 +90,12 @@ class IWP_MMB_Installer extends IWP_MMB_Core
                 'hook_extra' => array()
             ));
         }
-				
+        
         if ($activate) {
             if ($type == 'plugins') {
                 include_once(ABSPATH . 'wp-admin/includes/plugin.php');
-                 
-				 wp_cache_delete( 'plugins', 'plugins' );
-				 
-				$all_plugins = get_plugins();
-				foreach ($all_plugins as $plugin_slug => $plugin) {
+                $all_plugins = get_plugins();
+                foreach ($all_plugins as $plugin_slug => $plugin) {
                     $plugin_dir = preg_split('/\//', $plugin_slug);
                     foreach ($install_info as $key => $install) {
                         if (!$install || is_wp_error($install))
@@ -226,7 +222,7 @@ class IWP_MMB_Installer extends IWP_MMB_Core
     function upgrade_core($current)
     {
         ob_start();
-        if (!function_exists('wp_version_check') || !function_exists('get_core_checksums'))
+        if (!function_exists('wp_version_check'))
             include_once(ABSPATH . '/wp-admin/includes/update.php');
         
         @wp_version_check();
@@ -756,8 +752,8 @@ class IWP_MMB_Installer extends IWP_MMB_Core
                     }
                     
                     if (!in_array($path, $activated_plugins)) {
-                        $plugins['inactive'][$br_i]['path'] = $path;
-                        $plugins['inactive'][$br_i]['name'] = strip_tags($plugin['Name']);
+                       $plugins['inactive'][$br_i]['path'] = $path;
+                       $plugins['inactive'][$br_i]['name'] = strip_tags($plugin['Name']);
 						$plugins['inactive'][$br_i]['version'] = $plugin['Version'];
                         $br_i++;
                     }

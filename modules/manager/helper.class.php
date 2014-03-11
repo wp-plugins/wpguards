@@ -348,13 +348,11 @@ class IWP_MMB_Helper
         
         $current_message = $this->get_client_message_id();
         
-        if(isset($_GET['auto_login'])){//temp fix for stopping reuse of open admin url
-        	if ((int) $current_message >= (int) $message_id)
-				return array(
-					'error' => 'Invalid message recieved.'
-				);
-		}
-		
+        /*if ((int) $current_message > (int) $message_id)
+            return array(
+                'error' => 'Invalid message recieved. Deactivate and activate the InfiniteWP Client plugin on this site, then remove the website from your InfiniteWP account and add it again.'
+            );*/
+        
         $pl_key = $this->get_admin_panel_public_key();
         if (!$pl_key) {
             return array(

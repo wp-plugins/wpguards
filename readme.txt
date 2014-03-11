@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wpguards, guards, malware, security, backups, support, diagnostics, diagnostic
 Requires at least: 3.6
 Tested up to: 3.8.1
-Stable tag: 1.2.0
+Stable tag: 1.1.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,17 +82,11 @@ For more answers please visit [wpguards.com](http://wpguards.com/)
 
 == Changelog ==
 
-= 1.2.0 - 10.3.2014 =
-* Updated IWP Client
-
 = 1.1.1 - 9.3.2014 =
 * Forked IWP client
 * Protected uninstall.php file
 
 == Upgrade Notice ==
-
-= 1.2.0 =
-Improved security
 
 = 1.1.1 =
 Better integration with IWP and improved unistallation security
