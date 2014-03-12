@@ -452,7 +452,7 @@ function wpg_clean_backups() {
     return true;
 }
 
-add_filter('before_backup', 'wpg_download_file', 10 ,2);
+add_filter('wpg_before_backup', 'wpg_download_file', 10 ,2);
 /**
  * Download backup file
  * @param  array $args  arguments

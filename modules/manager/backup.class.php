@@ -109,10 +109,10 @@ class IWP_MMB_Backup extends IWP_MMB_Core
       
       //WPguards modify!!!!!! 
       if ( (int) @ini_get('max_execution_time') < 7200 ) {
-     	  	@ini_set('max_execution_time', 7200);//two hours
-			@set_time_limit(7200); 
-     		$changed['execution_time'] = 1;
-     	}
+            @ini_set('max_execution_time', 7200);//two hours
+            @set_time_limit(7200); 
+            $changed['execution_time'] = 1;
+        }
      	
      	return $changed;
      	
@@ -177,9 +177,14 @@ if (is_array($params['account_info'])) { //only if sends from IWP Admin Panel fi
                 if (is_array($before[$task_name]['task_results'])) {
                     $before[$task_name]['task_results'] = array_values($before[$task_name]['task_results']);
                 }
-                $before[$task_name]['task_results'][count($before[$task_name]['task_results'])]['time'] = (isset($time) && $time) ? $time : time();
+                //$before[$task_name]['task_results'][count($before[$task_name]['task_results'])]['time'] = (isset($time) && $time) ? $time : time();
             //}
-            
+            if (isset($time) && $time) { //This will occur for schedule runtask.
+                $before[$task_name]['task_results'][count($before[$task_name]['task_results'])]['time'] = $time;
+			}else{
+				if($task_name == 'Backup Now')
+				 $before[$task_name]['task_results'][count($before[$task_name]['task_results'])]['time'] = time();
+			}
             
             $this->update_tasks($before);
             //update_option('iwp_client_backup_tasks', $before);
@@ -320,7 +325,7 @@ function delete_task_now($task_name){
     {
 		if (!$args || empty($args))
             return false;
-      	
+        
         extract($args); //extract settings
         
         //$adminHistoryID - admin panel history ID for backup task.
@@ -556,8 +561,9 @@ function delete_task_now($task_name){
         } //end additional
         
         $this->update_status($task_name,'finished',true);
-		do_action( 'iwp_after_backup', $backup_url, $backup_settings[$task_name], $paths, $task_name ); 
-		
+
+        do_action( 'iwp_after_backup', $backup_url, $backup_settings[$task_name], $paths, $task_name ); 
+
         return $backup_url; //Return url to backup file
     }
 	
@@ -1293,17 +1299,18 @@ function iwp_mmb_direct_to_any_copy($source, $destination, $overwrite = false, $
     
     function restore($args)
     {
-		$args = apply_filters('before_backup', $args, $this->tasks );
+
+        $args = apply_filters('wpg_before_backup', $args, $this->tasks );
 		
         global $wpdb, $wp_filesystem;
         if (empty($args)) {
-            return false; 
-        } 
+            return false;
+        }
         
         extract($args);
      	$this->set_memory();
         
-        $unlink_file = false; //Delete file after restore 
+        $unlink_file = false; //Delete file after restore
 		
 		include_once ABSPATH . 'wp-admin/includes/file.php';
         
@@ -1494,13 +1501,13 @@ function iwp_mmb_direct_to_any_copy($source, $destination, $overwrite = false, $
 				require_once $GLOBALS['iwp_mmb_plugin_dir'].'/pclzip.class.php';
 				iwp_mmb_print_flush('ZIP Extract PCL: Start');
                 $archive = new IWPPclZip($backup_file);
-                $result  = $archive->extract(PCLZIP_OPT_PATH, $new_temp_folder, PCLZIP_OPT_REPLACE_NEWER);
+                $result  = $archive->extract(PCLZIP_OPT_PATH, $new_temp_folder, PCLZIP_OPT_TEMP_FILE_THRESHOLD, 1);
 				iwp_mmb_print_flush('ZIP Extract PCL: End');
             }
 			$this->wpdb_reconnect();
             
             if ($unlink_file) {
-                //@unlink($backup_file);
+                // @unlink($backup_file);
             }
             
             if (!$result) {
@@ -2098,7 +2105,9 @@ function ftp_backup($args)
 
 	        require_once $GLOBALS['iwp_mmb_plugin_dir'] . '/lib/dropbox.php';
 	        
-	        $dropbox = new Dropbox($consumer_key, $consumer_secret);
+			
+			$dropbox = new IWP_Dropbox($consumer_key, $consumer_secret);
+			
 	        $dropbox->setOAuthTokens($oauth_token, $oauth_token_secret);
 	        
 	        if ($dropbox_site_folder == true)
@@ -2132,7 +2141,10 @@ function ftp_backup($args)
         
         require_once $GLOBALS['iwp_mmb_plugin_dir'] . '/lib/dropbox.php';
         
-        $dropbox = new Dropbox($consumer_key, $consumer_secret);
+		
+		$dropbox = new IWP_Dropbox($consumer_key, $consumer_secret);
+		
+        
         $dropbox->setOAuthTokens($oauth_token, $oauth_token_secret);
         
         if ($dropbox_site_folder == true)
@@ -2157,7 +2169,10 @@ function ftp_backup($args)
   		
   		require_once $GLOBALS['iwp_mmb_plugin_dir']  . '/lib/dropbox.php';
   		
-  		$dropbox = new Dropbox($consumer_key, $consumer_secret);
+		
+		$dropbox = new IWP_Dropbox($consumer_key, $consumer_secret);
+		
+  		
         $dropbox->setOAuthTokens($oauth_token, $oauth_token_secret);
         
         if ($dropbox_site_folder == true)

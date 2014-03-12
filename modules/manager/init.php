@@ -1,10 +1,12 @@
 <?php
-/************************************************************
- * This plugin was modified by Wordpressgeeks				*
- * Copyright (c) 2013 Wordpressgeeks						*
- * www.revmakx.com											*
- *															*
- ************************************************************/
+/* 
+Plugin Name: InfiniteWP - Client
+Plugin URI: http://infinitewp.com/
+Description: This is the client plugin of InfiniteWP that communicates with the InfiniteWP Admin panel.
+Author: Revmakx
+Version: 1.2.8
+Author URI: http://www.revmakx.com
+*/
 /************************************************************
  * This plugin was modified by Revmakx						*
  * Copyright (c) 2012 Revmakx								*
@@ -24,7 +26,7 @@
  **************************************************************/
 
 if(!defined('IWP_MMB_CLIENT_VERSION'))
-	define('IWP_MMB_CLIENT_VERSION', '1.2.3');
+	define('IWP_MMB_CLIENT_VERSION', '1.2.8');
 
 
 if ( !defined('IWP_MMB_XFRAME_COOKIE')){
@@ -90,14 +92,8 @@ if( !function_exists ('iwp_mmb_parse_request')) {
 	{
 		if (!isset($HTTP_RAW_POST_DATA)) {
 			$HTTP_RAW_POST_DATA = file_get_contents('php://input');
-			
 		}
-		/*$fp = fopen('/home/wpguards//test/public_html/wp-content/plugins/wpguards/iwp-client/activate.txt', 'a');
-		fwrite($fp, print_r($params, TRUE));
-		fwrite($fp, print_r($_REQUEST, true));
-		//fwrite($fp, print_r($_SERVER, true));
-		fwrite($fp, print_r(unserialize(base64_decode(file_get_contents('php://input'))),true));
-		fclose($fp); */
+		
 		ob_start();
 		
 		global $current_user, $iwp_mmb_core, $new_actions, $wp_db_version, $wpmu_version, $_wp_using_ext_object_cache;
@@ -227,12 +223,11 @@ if( !function_exists ( 'iwp_mmb_add_site' )) {
 	{
 		global $iwp_mmb_core;
 		$num = extract($params);
-
+		
 		if ($num) {
 			if (!get_option('iwp_client_action_message_id') && !get_option('iwp_client_public_key')) {
 				$public_key = base64_decode($public_key);
 				
-				fwrite($fp, $public_key);
 				
 				if(trim($activation_key) != get_option('iwp_client_activate_key')){ //iwp
 					iwp_mmb_response('Invalid activation key', false);
@@ -241,8 +236,6 @@ if( !function_exists ( 'iwp_mmb_add_site' )) {
 				
 				if (checkOpenSSL() && !$user_random_key_signing) {
 					$verify = openssl_verify($action . $id, base64_decode($signature), $public_key);
-					//fwrite($fp, '<----Weryfy: '.$verify.'-'.$action.$id); 
-					///fclose($fp);
 					if ($verify == 1) {
 						$iwp_mmb_core->set_admin_panel_public_key($public_key);
 						$iwp_mmb_core->set_client_message_id($id);
@@ -291,8 +284,6 @@ if( !function_exists ( 'iwp_mmb_add_site' )) {
 			iwp_mmb_response('Invalid parameters received. Please try again.', false);
 		}
 	}
-
-
 }
 
 if( !function_exists ( 'iwp_mmb_remove_site' )) {
@@ -360,11 +351,12 @@ if( !function_exists ( 'iwp_mmb_backup_now' )) {
 	{
 		global $iwp_mmb_core;
 		die();
+
 		$iwp_mmb_core->get_backup_instance();
-		do_action( 'iwp_before_backup', $params ); 
+		do_action( 'iwp_before_backup', $params );
 		
-		$return = $iwp_mmb_core->backup_instance->backup($params); 
-		//Custom Add action 
+		$iwp_mmb_core->get_backup_instance();
+		$return = $iwp_mmb_core->backup_instance->backup($params);
 		
 		if (is_array($return) && array_key_exists('error', $return))
 			iwp_mmb_response($return['error'], false);
@@ -1185,15 +1177,18 @@ if(!function_exists('iwp_mmb_auto_print')){
 	}
 }
 
-
 global $iwp_mmb_core;
 $iwp_mmb_core = new IWP_MMB_Core();
 $mmb_core = 1;
-//$iwp_mmb_core->install(true);
+
 if(isset($_GET['auto_login']))
 	$iwp_mmb_core->automatic_login();	
 
+// if (function_exists('register_activation_hook'))
+//     register_activation_hook( __FILE__ , array( $iwp_mmb_core, 'install' ));
 
+// if (function_exists('register_deactivation_hook'))
+//     register_deactivation_hook(__FILE__, array( $iwp_mmb_core, 'uninstall' ));
 
 if (function_exists('add_action'))
 	add_action('init', 'iwp_mmb_plugin_actions', 99999);
@@ -1205,5 +1200,5 @@ if(	isset($_COOKIE[IWP_MMB_XFRAME_COOKIE]) ){
 	remove_action( 'admin_init', 'send_frame_options_header');
 	remove_action( 'login_init', 'send_frame_options_header');
 }
-//iwp_mmb_add_site(array('activation_key'))
+
 ?>

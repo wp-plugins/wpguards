@@ -3,7 +3,7 @@
  * Plugin Name: WPGuards
  * Plugin URI: http://wpguards.com
  * Description: WordPress Support and Maintenance on Autopilot
- * Version: 1.1.1
+ * Version: 1.2.0
  * Author: WordPressGeeks
  * Author URI: http://wordpressgeeks.co.uk
  * License: GPL2
@@ -180,13 +180,7 @@ class WPGuards {
 	        }
 
 	        // Set currency
-	        if ( $this->WPGAdmin->options['crm_apikey'] != '' && !get_option('wpguards_currency') ) {
-					
-				$currency = $this->WPGConnection->getUserCurrency();
-
-				update_option( 'wpguards_currency', $currency );
-
-			}
+			update_option( 'wpguards_currency', $this->WPGConnection->getUserCurrency() );
 
 			set_transient('wpg_check_plan', true, HOUR_IN_SECONDS );
 		}

@@ -447,7 +447,7 @@ table#tickets-stats tr.types td span.type-counter:nth-last-child(1):after {
 }
 
 .wpguards-tab-content.malware tr.details .single-tab {
-	width: 79%;
+	width: 74%;
 	float: right;
 	padding-bottom: 1em;
 }
@@ -456,6 +456,39 @@ table#tickets-stats tr.types td span.type-counter:nth-last-child(1):after {
 	color: red;
 }
 
+/* jQuery UI tabs style fix */
+
+.wpguards-tab-content.malware .ui-widget-content {
+	border: none; 
+	background: transparent; 
+}
+
+.wpguards-tab-content.malware .ui-widget-header {
+	border: none;
+	background: transparent;
+	font-weight: normal;
+}
+
+.wpguards-tab-content.malware .ui-state-active, .ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active, .ui-state-default, 
+.ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default,
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, 
+.ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+	border: none;
+	background: transparent;
+}
+
+.wpguards-tab-content.malware .ui-tabs .ui-tabs-nav li,
+.wpguards-tab-content.malware .ui-tabs .ui-tabs-nav li a {
+	float: none; 
+	padding: 0; 
+	text-decoration: none; 
+	margin: 0;
+}
+
+.wpguards-tab-content.malware .ui-tabs .ui-tabs-nav li.ui-tabs-active a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-tabs-loading a {
+	cursor: pointer;
+}
 
 
 
