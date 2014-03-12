@@ -97,8 +97,8 @@ For more answers please visit [wpguards.com](http://wpguards.com/)
 
 == Upgrade Notice ==
 
-= 1.2.2 =
-Fixed minor and major bugs
+= 1.2.4 =
+Fixed minor and major bugs with IWP and styles
 
 = 1.2.0 =
 Improved security
