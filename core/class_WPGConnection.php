@@ -361,5 +361,19 @@ class WPGConnection extends WPGuards{
 		public function get_next_scan_time() {
 			return json_decode( $this->curlCall( '', 'getNextScanTime', 'POST' ) );
 		}
+
+		/**
+		 * Set website notitication
+		 */
+		public function set_notification($name) {
+			return json_decode( $this->curlCall( $name, 'setNotification', 'POST' ) );
+		}
+
+		/**
+		 * Unset website notitication
+		 */
+		public function remove_notification($name) {
+			return json_decode( $this->curlCall( $name, 'removeNotification', 'POST' ) );
+		}
 		 
 }

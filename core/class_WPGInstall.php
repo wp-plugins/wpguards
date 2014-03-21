@@ -29,6 +29,7 @@ class WPGInstall{
 		
 		$this->iwp_install();
 		$this->dashboard_config();
+		$this->settings_preset();
 
 		// Set first check scan time
 		$malware = new WPGMalware();
@@ -85,8 +86,21 @@ class WPGInstall{
 	 * On plugin deactivation - remove notices
 	 * @return void
 	 */
-	public function deactivate(){
+	public function deactivate() {
 		delete_option('WPG_admin_notices');
 		delete_option('WPG_global_admin_notice');
 	}
+
+	/**
+	 * On install preset settings
+	 * @return void
+	 */
+	public function settings_preset() {
+
+		update_option('wpguards_notifications', array(
+			'uptime' => 1
+		));
+		
+	}
+
 } 

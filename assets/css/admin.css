@@ -692,6 +692,12 @@ form#wpguards-comment-form {
 	display: none;
 }
 
+.wpguards-tab-content.settings .inner-sidebar .postbox.form .inside a.instructions {
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}
+
 
 
 /* Misc */

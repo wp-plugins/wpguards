@@ -8,6 +8,7 @@ defined('ABSPATH') OR exit; //prevent from direct access
 class WPGAdmin {
 
     public $options;
+    public $notifications;
     public $apikey_changed = false;
 
     public $user_plan;
@@ -24,6 +25,7 @@ class WPGAdmin {
         global $WPGuards;
 
         $this->options = get_option('wpguards_settings');
+        $this->notifications = get_option('wpguards_notifications');
         $this->user_plan = get_option( 'wpguards_user_plan', 'trial' );
         $this->apikey_changed = get_option( 'wpguards_apikey_changed', false );
 
@@ -349,6 +351,34 @@ class WPGAdmin {
                 false                                                               // The array of arguments to pass to the callback
             );*/
 
+
+        register_setting('wpguards_notifications', 'wpguards_notifications', array($this, 'set_notifications'));                 //third param- cb
+
+        add_settings_section(
+            'wpguards_notifications',                                                         // ID used to identify this section and with which to register options
+            __( 'General Settings', 'wpguards' ),                               // Title to be displayed on the administration page
+            array($this, 'section_support_informations_cb'),                        // Callback used to render the description of the section
+            'wpguards_notifications'                                                     // Page on which to add this section of options
+        );
+
+            add_settings_field( 
+                'uptime',                                                       // ID used to identify the field
+                '<label for="uptime">'.__( 'Uptime monitor', 'wpguards' ).'</label>',      // The label to the left of the option interface element
+                array($this, 'field_uptime_cb'),                                    // The name of the function responsible for rendering the option interface
+                'wpguards_notifications',                                                // The page on which this option will be displayed
+                'wpguards_notifications',                                                     // The name of the section to which this field belongs
+                false                                                               // The array of arguments to pass to the callback
+            );
+
+            /*add_settings_field( 
+                'malware',                                                       // ID used to identify the field
+                '<label for="malware">'.__( 'Malware scanner', 'wpguards' ).'</label>',      // The label to the left of the option interface element
+                array($this, 'field_malware_cb'),                                    // The name of the function responsible for rendering the option interface
+                'wpguards_notifications',                                                // The page on which this option will be displayed
+                'wpguards_notifications',                                                     // The name of the section to which this field belongs
+                false                                                               // The array of arguments to pass to the callback
+            );*/
+
     }
 
     /**
@@ -402,6 +432,40 @@ class WPGAdmin {
     }
 
     /**
+     * Uptime monitor notification field output
+     * 
+     * @access public
+     * @return void
+     */
+    public function field_uptime_cb() {
+
+    	if (isset($this->notifications['uptime'])) $checked = checked($this->notifications['uptime'], 1, false);
+    	else $checked = '';
+
+        echo '<input type="checkbox" id="uptime" name="wpguards_notifications[uptime]" value="1" '.$checked.'><label for="uptime">'.__('Send nofitications', 'wpguards').'</label>';
+
+        echo '<p class="description">'.__( 'Get email alert every time when your website is down', 'wpguards' ).'</p>';
+
+    }
+
+    /**
+     * Malware notification field output
+     * 
+     * @access public
+     * @return void
+     */
+    public function field_malware_cb() {
+
+    	if (isset($this->notifications['malware'])) $checked = checked($this->notifications['malware'], 1, false);
+    	else $checked = '';
+
+        echo '<input type="checkbox" id="malware" name="wpguards_notifications[malware]" value="1" '.$checked.'><label for="malware">'.__('Send nofitications', 'wpguards').'</label>';
+
+        echo '<p class="description">'.__( 'Get email alert every time when malware scanner will find that something is wrong with your website', 'wpguards' ).'</p>';
+
+    }
+
+    /**
      * Check if start IWP
      */
     public function wpguards_sanitize_fields( $inputs ) {
@@ -435,6 +499,78 @@ class WPGAdmin {
         }*/
 
         return $output;
+
+    }
+
+    /**
+     * Set notifications in API
+     * @param  array $inputs saved inputs
+     * @return array         sanitized and checked inputs
+     */
+    public function set_notifications( $inputs ) {
+    	global $WPGuards;
+
+    	// Uptime
+
+    	$old = (isset($this->notifications['uptime'])) ? $this->notifications['uptime'] : 0;
+    	$new = (isset($inputs['uptime'])) ? $inputs['uptime'] : 0;
+
+    	// Perform action only if new value is other than old
+        if ( $new != $old) {
+
+        	if ($new == 1) { // set notification
+
+                pr2file($WPGuards->WPGConnection->set_notification('uptime'));
+        		
+        		// API call and check if was set
+        		if ( !$WPGuards->WPGConnection->set_notification('uptime') ) {
+	        		$this->setNotice(175, 'error', __('There was an error with setting your Uptime monitor notification. Please try again and if error persist contact support.'));
+	        		unset($inputs['uptime']);
+	        	}
+
+        	} else { // remove notification
+
+        		// API call and check if was removed
+        		if ( !$WPGuards->WPGConnection->remove_notification('uptime') ) {
+	        		$this->setNotice(175, 'updated', __('There was an error with removing your Uptime monitor notification. Please try again and if error persist contact support.'));
+	        		unset($inputs['uptime']);
+	        	}
+
+        	}
+
+        }
+
+
+
+        // Malware
+
+        /*$old = (isset($this->notifications['malware'])) ? $this->notifications['malware'] : 0;
+    	$new = (isset($inputs['malware'])) ? $inputs['malware'] : 0;
+
+    	// Perform action only if new value is other than old
+        if ( $new != $old) {
+
+        	if ($new == 1) { // set notification
+        		
+        		// API call and check if was set
+        		if ( false ) { //$WPGuards->WPGConnection->set_notification('malware') ) {
+	        		$this->setNotice(185, 'error', __('There was an error with setting your Malware scanner notification. Please try again and if error persist contact support.'));
+	        		unset($inputs['malware']);
+	        	}
+
+        	} else { // remove notification
+
+        		// API call and check if was removed
+        		if ( false ) { //$WPGuards->WPGConnection->remove_notification('malware') ) {
+	        		$this->setNotice(185, 'error', __('There was an error with removing your Malware scanner notification. Please try again and if error persist contact support.'));
+	        		unset($inputs['malware']);
+	        	}
+
+        	}
+
+        }*/
+
+        return $inputs;
 
     }
 

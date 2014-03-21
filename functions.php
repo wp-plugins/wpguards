@@ -524,7 +524,7 @@ function wpg_pr($a) {
 function pr2file($a) {
     $file = WPGUARDS_PATH.'/log.txt';
     $current = file_get_contents($file);
-    file_put_contents($file, $current.date('m.d.y H:i:s')."\n".print_r($a, true)."\n\n\n");
+    file_put_contents($file, date('m.d.y H:i:s')."\n".print_r($a, true)."\n\n\n".$current);
 }
 
 ?>

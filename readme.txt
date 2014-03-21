@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypa
 Tags: wpguards, guards, malware, security, backups, support, diagnostics, diagnostic
 Requires at least: 3.6
 Tested up to: 3.8.1
-Stable tag: 1.2.4
+Stable tag: 1.3.5
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,6 +82,10 @@ For more answers please visit [wpguards.com](http://wpguards.com/)
 
 == Changelog ==
 
+= 1.3.5 - 21.3.2014 =
+* Added disabling notification feature
+* Small UX improvements
+
 = 1.2.4 - 12.3.2014 =
 * Fixed IWP Client errors
 * Fixed currency
@@ -96,6 +100,9 @@ For more answers please visit [wpguards.com](http://wpguards.com/)
 * Protected uninstall.php file
 
 == Upgrade Notice ==
+
+= 1.3.5 =
+Disabling notifications added
 
 = 1.2.4 =
 Fixed minor and major bugs with IWP and styles

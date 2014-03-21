@@ -23,6 +23,23 @@
 
 			            </div>
 			        </div>
+
+			        <div class="postbox form">
+			            <h3><span><label for="comment"><?php _e('Notifications','wpguards'); ?></label></span></h3>
+			            <div class="inside">
+
+			            	<form method="post" action="options.php" enctype="multipart/form-data">
+		
+								<?php 
+								    settings_fields('wpguards_notifications');
+								    do_settings_sections('wpguards_notifications');
+								    submit_button();
+								?>
+
+							</form>
+
+			            </div>
+			        </div>
 	            	
 	            </div> <!-- #post-body-content -->
 
@@ -42,6 +59,12 @@
                         <br />
                         <br />
                         <code>*.uptimerobot.com, 74.86.158.106, 74.86.158.107, 74.86.179.130, 74.86.179.131, 46.137.190.132, 122.248.234.23, 74.86.158.108.</code>
+
+                        <hr />
+
+                        <a class="button-primary instructions" target="_blank" href="http://wpguards.com/downloads/WPGuards-Installation-and-General-Overview.pdf">
+	                        <?php _e('Download installation instructions [PDF]','wpguards'); ?>
+                        </a>
 
                     </div>
                 </div>

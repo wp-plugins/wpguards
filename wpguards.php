@@ -3,14 +3,13 @@
  * Plugin Name: WPGuards
  * Plugin URI: http://wpguards.com
  * Description: WordPress Support and Maintenance on Autopilot
- * Version: 1.2.4
+ * Version: 1.3.5
  * Author: WordPressGeeks
  * Author URI: http://wordpressgeeks.co.uk
  * License: GPL2
  * 
  * Text Domain: wpguards
  */
-
 
 /**
  * Define constants
