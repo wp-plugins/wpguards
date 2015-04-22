@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: wordpressgeeks.co.uk, Kubitomakita, dkpajor
+Contributors: wordpressgeeks.co.uk, Kubitomakita, dkpajor, maxmatloka
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40wpguards%2ecom&lc=US&item_name=WPGuards&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest
 Tags: wpguards, guards, malware, security, backups, support, diagnostics, diagnostic
 Requires at least: 3.6
