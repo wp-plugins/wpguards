@@ -3,8 +3,8 @@ Contributors: wordpressgeeks.co.uk, Kubitomakita, dkpajor, maxmatloka
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40wpguards%2ecom&lc=US&item_name=WPGuards&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest
 Tags: wpguards, guards, malware, security, backups, support, diagnostics, diagnostic
 Requires at least: 3.6
-Tested up to: 3.8.1
-Stable tag: 1.3.7
+Tested up to: 4.2
+Stable tag: 2.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,6 +81,11 @@ For more answers please visit [wpguards.com](http://wpguards.com/)
 7. Customer Panel
 
 == Changelog ==
+
+= 2.0 - 23.04.2015 =
+* New API
+* Plugin refactoring
+* Fixed various bugs
 
 = 1.3.5 - 21.3.2014 =
 * Added disabling notification feature
