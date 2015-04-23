@@ -3,7 +3,7 @@
  * Plugin Name: WPGuards
  * Plugin URI: http://wpguards.com
  * Description: WordPress Support and Maintenance on Autopilot
- * Version: 1.3.5
+ * Version: 1.3.7
  * Author: WordPressGeeks
  * Author URI: http://wordpressgeeks.co.uk
  * License: GPL2
@@ -73,7 +73,7 @@ class WPGuards {
 		$this->loadManualClass();
 
 		// Manage user
-		add_action('admin_init', array($this, 'manage_user'));
+		// add_action('admin_init', array($this, 'manage_user'));
 
 		// On first authorization make IWP install
 		add_action('wpg_authorized', array($this, 'install'));
