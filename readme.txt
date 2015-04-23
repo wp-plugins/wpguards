@@ -3,8 +3,8 @@ Contributors: wordpressgeeks.co.uk, Kubitomakita, dkpajor, maxmatloka
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40wpguards%2ecom&lc=US&item_name=WPGuards&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest
 Tags: wpguards, guards, malware, security, backups, support, diagnostics, diagnostic
 Requires at least: 3.6
-Tested up to: 3.9.1
-Stable tag: 1.3.5
+Tested up to: 3.8.1
+Stable tag: 1.3.6
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

@@ -125,7 +125,7 @@ class WPGuards {
 	 * @return void
 	 */
 	private function loadManualClass(){
-		$this->WPGConnection = new WPGConnection( $this );
+		// $this->WPGConnection = new WPGConnection( $this );
 	}
 	
 	/**
@@ -198,23 +198,23 @@ class WPGuards {
 
 		}
 	 	
-	 	$install = new WPGInstall( $this ); 
-		$install->install();
+	 // 	$install = new WPGInstall( $this ); 
+		// $install->install();
 	 }
 	
 	/**
 	 * Uninstall hooks
 	 */
 	 public function deactivate(){
-	 	$deactivate = new WPGInstall( $this ); 
-		$deactivate->deactivate();
+	 // 	$deactivate = new WPGInstall( $this ); 
+		// $deactivate->deactivate();
 	 }
 }
 
 $GLOBALS['WPGuards'] = new WPGuards();
-
+/*
 if (function_exists('register_activation_hook'))
     register_activation_hook( __FILE__ , array( $GLOBALS['WPGuards'], 'install' )); 
 
 if (function_exists('register_deactivation_hook'))
-    register_deactivation_hook(__FILE__, array( $GLOBALS['WPGuards'], 'deactivate' ));
+    register_deactivation_hook(__FILE__, array( $GLOBALS['WPGuards'], 'deactivate' ));*/
