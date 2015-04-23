@@ -184,11 +184,11 @@ function wpg_support_comment_notices($post, $response) {
 function wpg_check_apikey() {
 
     // get the options from global plugin instance
-    global $WPGuards;
+    /*global $WPGuards;
     $opt = $WPGuards->WPGAdmin->options;
 
     if ( empty($opt['crm_apikey']) || !$WPGuards->WPGConnection->checkApiKey() )
-        return false;
+        return false;*/
 
     return true;
 }
@@ -292,14 +292,14 @@ function WPG_admin_notices() {
 
   if ($notices= get_option('WPG_admin_notices')) {
     foreach ($notices as $notice) {
-        echo "<div class='".$notice['type']."'><p>".$notice['message']."</p></div>";
+        // echo "<div class='".$notice['type']."'><p>".$notice['message']."</p></div>";
     }
     delete_option('WPG_admin_notices');
   }
   
   if($notices = get_option('WPG_global_admin_notice') ){
     foreach ($notices as $notice) {
-        echo "<div class='".$notice['type']."'><p>".$notice['message']."</p></div>";
+        // echo "<div class='".$notice['type']."'><p>".$notice['message']."</p></div>";
     }
   }
 

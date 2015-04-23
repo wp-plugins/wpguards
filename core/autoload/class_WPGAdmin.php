@@ -145,7 +145,7 @@ class WPGAdmin {
              $this->get_menu_icon(), 
              '3.69'
         );
-
+/*
         $home = add_submenu_page(
             'wpguards',
             __( 'Home', 'wpguards' ),
@@ -177,14 +177,14 @@ class WPGAdmin {
             array($this, 'display_page')
         );
 
-        /*$maintenance = add_submenu_page(
+        $maintenance = add_submenu_page(
             'wpguards',
             __( 'Maintenance', 'wpguards' ),
             __( 'Maintenance', 'wpguards' ),
             'manage_options',
             'wpguards_maintenance',
             array($this, 'display_page')
-        );*/
+        );
 
         $malware = add_submenu_page(
             'wpguards',
@@ -234,7 +234,7 @@ class WPGAdmin {
         add_action( 'admin_print_styles-'.$home, array($this, 'load_wpguards_loader_style') );
         add_action( 'admin_print_styles-'.$support, array($this, 'load_wpguards_loader_style') );
         if (!empty($this->options['analytics'])) add_action( 'admin_print_styles-'.$analytics, array($this, 'load_wpguards_loader_style') );
-        add_action( 'admin_print_styles-'.$backups, array($this, 'load_wpguards_loader_style') );
+        add_action( 'admin_print_styles-'.$backups, array($this, 'load_wpguards_loader_style') );*/
     }
 
     /**
@@ -247,38 +247,8 @@ class WPGAdmin {
     ?>
         <div class="wrap">
 
-            <!-- Display errors -->
-            <?php settings_errors(); ?>
-
-            <!-- Display icon -->
-            <?php $this->display_screen_icon(); ?>
-            
-            <h2 class="nav-tab-wrapper">
-                <!-- <span class="nav-title"><?php _e( 'WPGuards', 'wpguards' ); ?> -->
-                <a href="?page=wpguards" class="nav-tab <?php echo $_GET[ 'page' ] == 'wpguards' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Home', 'wpguards' ); ?></a>
-                <?php if (!empty($this->options['analytics'])): ?>
-                    <a href="?page=wpguards_analytics" class="nav-tab <?php echo $_GET[ 'page' ] == 'wpguards_analytics' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Analytics', 'wpguards' ); ?></a>
-                <?php endif ?>
-                <a href="?page=wpguards_backups" class="nav-tab <?php echo $_GET[ 'page' ] == 'wpguards_backups' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Backups', 'wpguards' ); ?></a>
-                <!-- <a href="?page=wpguards_maintenance" class="nav-tab <?php echo $_GET[ 'page' ] == 'wpguards_maintenance' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Maintenance', 'wpguards' ); ?></a> -->
-                <a href="?page=wpguards_malware" class="nav-tab <?php echo $_GET[ 'page' ] == 'wpguards_malware' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Malware', 'wpguards' ); ?></a>
-                <a href="?page=wpguards_support" class="nav-tab <?php echo $_GET[ 'page' ] == 'wpguards_support' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Support', 'wpguards' ); ?></a>
-                <a href="?page=wpguards_diagnostic" class="nav-tab <?php echo $_GET[ 'page' ] == 'wpguards_diagnostic' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Diagnostic tools', 'wpguards' ); ?></a>
-                <a href="?page=wpguards_settings" class="nav-tab <?php echo $_GET[ 'page' ] == 'wpguards_settings' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Settings', 'wpguards' ); ?></a>
-
-                <?php if ( isset($_GET['ticket']) && isset($_GET['ticket_title']) ) {
-                    // echo '<a class="nav-tab nav-tab-active tab-ticket"><i class="icon-ticket"></i> '.urldecode($_GET['ticket_title']).'</a>';
-                    echo '<a class="nav-tab nav-tab-active tab-ticket"><i class="icon-ticket"></i></a>';
-                } ?>
-
-            </h2>
-            
-
-            <?php if ( isset($_GET['ticket']) && isset($_GET['ticket_title']) ) {
-                require_once(WPGUARDS_PATH.'admin/templates/tab_ticket.php');
-            } else {
-                require_once(WPGUARDS_PATH.'admin/templates/tab_'.$_GET['page'].'.php');
-            } ?>
+            <h2>We are currently performing API update and maintenance. Plugin will be working shortly.</h2>
+            <h3>If plugin will not update automatically, please update it when available.</h3>
 
             
         </div><!-- .wrap -->
