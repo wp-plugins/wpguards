@@ -42,7 +42,7 @@
                     </div><!-- .column_2 -->
                 </div><!-- .columns -->
 
-                <div class="postbox form">
+                <div id="tickets_holder">
                     <div id="tickets" class="loader large-icon"></div>
                 </div>
                 

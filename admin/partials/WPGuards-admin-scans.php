@@ -28,6 +28,14 @@
                 </div>
             </div>
 
+            <div class="updated"><p><?php _e('Your scan is missing? It might take up to 4 hours to fully process the request.','wpguards'); ?></p></div>
+
+            <?php if (!empty($scanTransient)) : foreach ($scanTransient as $scan) : if ($scan->positives > 0) : ?>
+            <div class="error"><p><?php printf(__('Scanner has performed %1$s tests which %2$s of them found suspicious content on your website. Please investigate the problem or ask for a <a href="%3$s">professional help</a>','wpguards'), $scan->tests, $scan->positives, admin_url('admin.php?page=wpguards_support')); ?></p></div>
+            <?php else: ?>
+            <div class="updated"><p><?php printf(__('Scanner has performed %1$s tests which none of them found suspicious content on your website. Click on test details to get more info.','wpguards'), $scan->tests); ?></p></div>
+            <?php endif; endforeach; endif; ?>
+
             <div class="postbox form">
                 <h3><?php _e('Scans','wpguards'); ?></h3>
                 <div class="inside">
@@ -50,7 +58,7 @@
                             if (!empty($scanTransient)) : 
                                 foreach ($scanTransient as $scan) :
                             ?>
-                            <tr class="scan">
+                            <tr class="scan <?php echo ($scan->positives == '0') ? 'green' : 'red'; ?>">
                                 <td class="col-scan">
                                     <span class="dashicons dashicons-lock"></span>
                                     <strong><?php _e('Scan','wpguards'); ?></strong>
@@ -62,7 +70,7 @@
                                     </div>
                                     <?php $scan->result = unserialize($scan->result); ?>
                                     <?php if (!empty($scan->result)) : ?>
-                                    <div class="scan">
+                                    <div class="scan" style="display: none;">
                                     <table>
                                         <tbody>
                                             <?php foreach ($scan->result as $name => $scan) : ?>

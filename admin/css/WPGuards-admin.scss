@@ -258,7 +258,7 @@
                             border-radius: 50%;
                             margin-top:-25px;
                             text-align: center;
-                            background: #ffba00;
+                            background: #7ad03a;
 
                             -webkit-transition: all 100ms ease;
                                     transition: all 100ms ease;
@@ -311,6 +311,7 @@
                     .col-scan {
                         position: relative;
                         padding: 17px 0 17px 80px;
+                        cursor: pointer;
 
                         span.dashicons {
                             position:absolute;
@@ -325,7 +326,7 @@
                             border-radius: 50%;
                             margin-top:-25px;
                             text-align: center;
-                            background: #ffba00;
+                            background: #7ad03a;
 
                             -webkit-transition: all 100ms ease;
                                     transition: all 100ms ease;
@@ -341,6 +342,7 @@
                         }
 
                         .scan table {
+                            cursor: default;
                             width: 100%;
 
                             td {
@@ -382,6 +384,116 @@
                         margin-left: -3px;
                         margin-top: -28px;
                         padding-top: 3px;
+                    }
+
+                    &.red {
+                        span.dashicons {
+                            background: #dd3d36;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * Payments page styles
+     */
+    
+    &.wpguards-uptime {
+        .column_3 {
+            canvas {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .column_3:nth-child(2n) {
+            table {
+                margin-top: 10px;
+                width: 100%;
+
+                th {
+                    width: 50%;
+                    font-weight: 400;
+                    text-align: right;
+                    font-style: italic;
+                    padding-right: 5px;
+                    padding-bottom: 7px;
+                }
+
+                td {
+                    padding-left: 5px;
+                    font-weight: bold;
+                    padding-bottom: 7px;
+                }
+            }
+        }
+    }
+
+    /**
+     * Payments page styles
+     */
+    
+    &.wpguards-payments {
+        table.payments {
+            border-collapse: collapse; 
+            width: 100%;
+
+            thead th {
+                padding: 15px 0;
+                color: #828296;
+                text-transform: uppercase;
+                text-align: left;
+            }
+
+            tbody {
+                tr {
+                    .col-payment {
+                        position: relative;
+                        padding: 17px 0 17px 80px;
+
+                        span.dashicons {
+                            position:absolute;
+                            top: 45px;
+                            left: 10px;
+                            font-size: 30px;
+                            color: #fff;
+                            display: block;
+                            width: 50px;
+                            height: 50px;
+                            line-height: 50px;
+                            border-radius: 50%;
+                            margin-top:-25px;
+                            text-align: center;
+                            background: #7ad03a;
+
+                            -webkit-transition: all 100ms ease;
+                                    transition: all 100ms ease;
+                        }
+
+                        &.red {
+                            span.dashicons {
+                                background: #dd3d36;
+                            }
+                        }
+
+                    }
+
+                    &:hover .col-payment span.dashicons {
+                        width: 56px;
+                        height: 53px;
+                        margin-left: -3px;
+                        margin-top: -28px;
+                        padding-top: 3px;
+                    }
+                }
+                div.info {
+                    font-size: 0.9em;
+                    color: #c0c0c0;
+
+                    i {
+                        font-weight: 100;
                     }
                 }
             }
@@ -654,9 +766,14 @@
      */
     
     &.wpguards-utilities {
-        .postbox {
+        .postbox.utility {
             position: relative;
             padding-left: 70px;
+
+            h3 a {
+                color: rgb(68, 68, 68);
+                text-decoration: none;
+            }
 
             .inside {
                 margin: 0;

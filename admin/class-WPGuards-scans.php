@@ -69,8 +69,8 @@ class WPGuards_Scans {
         $response = WPGuards_Curl::fetch('scan/getScans');
 
         if ($response->status == 'success') {
-            // transient expires 4 hours after next backup (time to process backup and send to cloud)
-            $transientTime = $response->data->nextScan - time() + 14400;
+            // transient expires after 4 hours
+            $transientTime = 14400;
             set_transient('wpguards_scans', $response->data->scans, $transientTime);
             set_transient('wpguards_nextScan', $response->data->nextScan, $transientTime);
         }
@@ -107,7 +107,7 @@ class WPGuards_Scans {
             );
         
             add_action('admin_print_styles-' . $menuHook, array($this, 'enqueueStyles'));
-
+            add_action('admin_print_scripts-' . $menuHook, array($this, 'enqueueScripts'));
         }
 
     }
@@ -129,6 +129,18 @@ class WPGuards_Scans {
     public function enqueueStyles() {
 
         wp_enqueue_style('wpguards_admin_css', plugin_dir_url(__FILE__) . 'css/WPGuards-admin.css');
+
+    }
+
+    /**
+     * Register the JavaScript for the WPGuards scans.
+     *
+     * @since   2.0
+     * @return  void
+     */
+    public function enqueueScripts() {
+
+        wp_enqueue_script('wpguards_scans', plugin_dir_url(__FILE__) . 'js/WPGuards-scans.js', array('jquery'), false, true);
 
     }
 

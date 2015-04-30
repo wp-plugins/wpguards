@@ -10,7 +10,7 @@
  * Plugin Name:  WPGuards
  * Plugin URI:   http://wpguards.com
  * Description:  WordPress Support and Maintenance on Autopilot
- * Version:      2.0
+ * Version:      2.0.1
  * Author:       WPGeeks
  * Author URI:   http://wpgeeks.co.uk
  * License:      GPL2
@@ -25,7 +25,7 @@ if (!defined('ABSPATH')) {
  * Plugin config
  */
 
-define('WPGUARDS_VERSION', '2.0');
+define('WPGUARDS_VERSION', '2.0.1');
 define('WPGUARDS_NAME', __('WPGuards', 'wpguards'));
 define('WPGUARDS_DIR', plugin_dir_path(__FILE__));
 define('WPGUARDS_URL', plugin_dir_url(__FILE__));
