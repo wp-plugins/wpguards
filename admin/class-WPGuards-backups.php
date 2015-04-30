@@ -72,8 +72,8 @@ class WPGuards_Backups {
         $response = WPGuards_Curl::fetch('backup/getBackups');
 
         if ($response->status == 'success') {
-            // transient expires 4 hours after next backup (time to process backup and send to cloud)
-            $transientTime = $response->data->nextBackup - time() + 14400;
+            // transient expires after 4 hours
+            $transientTime = 14400;
             set_transient('wpguards_backups', $response->data->backups, $transientTime);
             set_transient('wpguards_nextBackup', $response->data->nextBackup, $transientTime);
         }

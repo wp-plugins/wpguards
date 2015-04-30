@@ -22,7 +22,7 @@
             url  : WPGuards.ajaxURL,
             data : {action:'getTickets'}
         }).done(function(response) {
-            jQuery('#tickets').removeClass('loader').html(response);
+            jQuery('#tickets_holder').removeClass('loader').html(response);
         });
 
         // Get comments
@@ -44,10 +44,6 @@
                 }
             }).done(function(response) {
                 commentsDiv.removeClass('loader').addClass('loaded').html(response);
-
-                jQuery('.customer-avatar').html('<img width="80" height="80" style="border-radius:50%"src="data:image/png;base64,' + userAvatar + '">');
-                jQuery('.support-avatar').html('<img width="80" height="80" style="border-radius:50%"src="data:image/png;base64,' + supportAvatar + '">');
-
             });
         });
 

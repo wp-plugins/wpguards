@@ -41,6 +41,8 @@
                 </div>
             </div>
 
+            <div class="updated"><p><?php _e('Your backup is missing? It might take up to 4 hours to fully process the request.','wpguards'); ?></p></div>
+
             <div class="postbox form">
                 <h3><?php _e('Backups','wpguards'); ?></h3>
                 <div class="inside">

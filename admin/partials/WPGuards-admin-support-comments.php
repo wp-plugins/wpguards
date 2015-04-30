@@ -46,7 +46,15 @@
                 <?php echo date('Y-m-d H:i', strtotime($comment->created_at)); ?>
             </span>
         </div>
-        <div class="<?php echo $comment->extra_class; ?>-avatar"></div>
+        <?php if ($comment->extra_class == 'customer') : ?>
+        <div class="<?php echo $comment->extra_class; ?>-avatar">
+            <?php echo get_avatar(get_current_user_id(), '80'); ?>
+        </div>
+        <?php else: ?>
+        <div class="<?php echo $comment->extra_class; ?>-avatar">
+        <?php echo get_avatar('support@wpguards.com', '80'); ?>
+        </div>
+        <?php endif; ?>
     </div>
 
 <?php endforeach; ?>

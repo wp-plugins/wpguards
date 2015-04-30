@@ -87,7 +87,7 @@ class WPGuards_Admin {
 
         // set transient data
         if ($response->status == 'success') {
-            set_transient('wpguards_checkConnection', $response->data, 28800);
+            set_transient('wpguards_checkConnection', $response->data, 3600);
         } else {
             self::setNotice('1083', 'error', $response->message);
         }

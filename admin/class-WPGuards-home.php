@@ -85,8 +85,8 @@ class WPGuards_Home {
                 );
             }
         }
-        
-        if (is_object($scans) && !empty($scans)) {
+
+        if (is_array($scans) && !empty($scans)) {
             foreach ($scans as $scan) {
                 $calendarData[] = array(
                     'start'     => $scan->date,

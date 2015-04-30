@@ -49,7 +49,9 @@ class WPGuards
 		new WPGuards_Home($this);
 		new WPGuards_Backups($this);
 		new WPGuards_Scans($this);
+		new WPGuards_Uptime($this);
 		new WPGuards_Support($this);
+		new WPGuards_Payments($this);
 		new WPGuards_Settings($this);
 		new WPGuards_Utilities($this);
 
@@ -78,8 +80,10 @@ class WPGuards
 		require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-WPGuards-settings.php';
 		require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-WPGuards-admin.php';
 		require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-WPGuards-backups.php';
+		require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-WPGuards-payments.php';
 		require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-WPGuards-scans.php';
 		require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-WPGuards-home.php';
+		require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-WPGuards-uptime.php';
 		require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-WPGuards-support.php';
 		require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-WPGuards-utilities.php';
 

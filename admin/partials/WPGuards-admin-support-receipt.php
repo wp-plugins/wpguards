@@ -48,11 +48,10 @@
 <?php endif;?>
     <input type="hidden" name="cmd" value="_cart">
     <input type="hidden" name="upload" value="1">
-    <?php // @paypal ?>
     <input type="hidden" name="business" value="paypal@wpguards.com">
     <input type="hidden" name="currency_code" value="<?php echo $currency; ?>">
     <input type="hidden" name="notify_url" value="<?php echo API_URL; ?>/api/v1/payment/paypalTicket">
-    <input type="hidden" name="return" value="<?php echo admin_url('admin.php?page=wpguards_support&paid=1'); ?>">
+    <input type="hidden" name="return" value="<?php echo admin_url('admin.php?page=wpguards_payments&paid=1'); ?>">
     <input type="hidden" name="cancel_return" value="<?php echo admin_url('admin.php?page=wpguards_support'); ?>">
     <?php $i = 1; ?>
     <?php foreach ($response->data as $ticketID => $ticketPayment) : ?>

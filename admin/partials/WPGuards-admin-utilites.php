@@ -16,13 +16,22 @@
 
     <div class="metabox-holder">
 
-        <div id="post-body">
-            <div id="post-body-content">
+        <div class="postbox form">
+            <h3><?php _e('Information','wpguards'); ?></h3>
+            <div class="inside">
+                <p>
+                    <?php _e('WPGuards plugin offers a bunch of online tools for webmasters and webdesigners. These utilities might help to improve your website experience and performance in a minute','wpguards'); ?>
+                </p>
+            </div>
+        </div>
 
-                <div class="postbox form">
+        <div id="post-body">
+
+            <div id="post-body-content">
+                <div class="postbox form utility">
                     <span class="dashicons dashicons-editor-spellcheck"></span>
                     <h3>
-                        <a href="http://respelt.com/?url=<?php echo site_url(); ?>">
+                        <a href="http://respelt.com/?url=<?php echo site_url(); ?>" target="_blank">
                             <?php _e('Respelt spell checker', 'wpguards'); ?>
                         </a>
                     </h3>
@@ -31,10 +40,10 @@
                     </div>
                 </div>
 
-                <div class="postbox form">
+                <div class="postbox form utility">
                     <span class="dashicons dashicons-dashboard"></span>
                     <h3>
-                        <a href="http://tools.pingdom.com/fpt/">
+                        <a href="http://tools.pingdom.com/fpt/" target="_blank">
                             <?php _e('Page loading time', 'wpguards'); ?>
                         </a>
                     </h3>
@@ -43,10 +52,10 @@
                     </div>
                 </div>
 
-                <div class="postbox form">
+                <div class="postbox form utility">
                 <span class="dashicons dashicons-media-code"></span>
                     <h3>
-                        <a href="http://validator.w3.org/check?uri=<?php echo site_url(); ?>">
+                        <a href="http://validator.w3.org/check?uri=<?php echo site_url(); ?>" target="_blank">
                             <?php _e('Validate HTML', 'wpguards'); ?>
                         </a>
                     </h3>
@@ -55,10 +64,10 @@
                     </div>
                 </div>
 
-                <div class="postbox form">
+                <div class="postbox form utility">
                     <span class="dashicons dashicons-admin-links"></span>
                     <h3>
-                        <a href="http://validator.w3.org/checklink?uri=<?php echo site_url(); ?>">
+                        <a href="http://validator.w3.org/checklink?uri=<?php echo site_url(); ?>" target="_blank">
                             <?php _e('Broken link checker', 'wpguards'); ?>
                         </a>
                     </h3>
@@ -67,10 +76,10 @@
                     </div> 
                 </div>
 
-                <div class="postbox form">
+                <div class="postbox form utility">
                     <span class="dashicons dashicons-clock"></span>
                     <h3>
-                        <a href="https://developers.google.com/speed/pagespeed/insights/?url=<?php echo site_url(); ?>">
+                        <a href="https://developers.google.com/speed/pagespeed/insights/?url=<?php echo site_url(); ?>" target="_blank">
                             <?php _e('Google PageSpeed Insights', 'wpguards'); ?>
                         </a>
                     </h3>
@@ -80,10 +89,10 @@
                 </div> 
 
                 <?php if (isset($basicData->planID) && $basicData->planID == '2') : ?>
-                <div class="postbox form">
+                <div class="postbox form utility">
                     <span class="dashicons dashicons-clock"></span>
                     <h3>
-                        <a href="https://www.virustotal.com/en">
+                        <a href="https://www.virustotal.com/en" target="_blank">
                             <?php _e('Malware scanner', 'wpguards'); ?>
                         </a>
                     </h3>
