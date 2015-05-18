@@ -1,6 +1,6 @@
 <?php
 /**
- * Malware scans page for WPGuards
+ * Payments subpage page for WPGuards
  * 
  * @link         http://wpguards.com
  * @author       wpguards.com
@@ -9,7 +9,7 @@
  * @subpackage   WPGuards/admin
  */
 
-class WPGuards_Scans {
+class WPGuards_Payments {
 
     /**
      * WPGuards instance
@@ -43,37 +43,11 @@ class WPGuards_Scans {
         $this->WPGuards = $WPGuards;
         $this->options  = get_option('wpguards_settings');
 
-        $this->setScansTransient();
-
         // add submenu/menu page
         add_action('admin_menu', array($this, 'addOptionPage'));
-        
 
         return $this;
 
-    }
-
-    public function setScansTransient() 
-    {   
-        if (!get_option('wpguards_connected', false)) {
-            return;
-        }
-
-        // by default scans are stored in transient
-        $scans = get_transient('wpguards_scans');
-
-        if ($scans !== false) {
-            return $scans;
-        }  
-
-        $response = WPGuards_Curl::fetch('scan/getScans');
-
-        if ($response->status == 'success') {
-            // transient expires after 4 hours
-            $transientTime = 14400;
-            set_transient('wpguards_scans', $response->data->scans, $transientTime);
-            set_transient('wpguards_nextScan', $response->data->nextScan, $transientTime);
-        }
     }
 
     /**
@@ -90,45 +64,29 @@ class WPGuards_Scans {
             return;
         }
 
-        if ($basicData->planID == '2') {
-            return;
-        }
-
         if (get_option('wpguards_connected')) {
             // display only settings page if user is not registered yet
 
             $menuHook = add_submenu_page(
                 'wpguards',
-                __('Scans', 'wpguards'), 
-                __('Scans', 'wpguards'),
+                __('Payments', 'wpguards'), 
+                __('Payments', 'wpguards'),
                 'manage_options', 
-                'wpguards_scans', 
+                'wpguards_payments', 
                 array($this, 'render')
             );
         
             add_action('admin_print_styles-' . $menuHook, array($this, 'enqueueStyles'));
-            add_action('admin_print_scripts-' . $menuHook, array($this, 'enqueueScripts'));
+
         }
 
     }
 
     public function render()
     {
-        $scanTransient     = get_transient('wpguards_scans');
-        $nextScanTransient = get_transient('wpguards_nextScan');
+        $payments = WPGuards_Curl::fetch('payment/getPayments');
 
-        if (!empty($scanTransient)) {
-
-            $positive = false;
-
-            foreach ($scanTransient as $scan) {
-                if ($scan->positives > 0) {
-                    $positive = true;
-                }
-            } 
-        } 
-
-        include(plugin_dir_path(__FILE__) . 'partials/WPGuards-admin-scans.php');
+        include(plugin_dir_path(__FILE__) . 'partials/WPGuards-admin-payments.php');
     }
 
     /**
@@ -137,22 +95,11 @@ class WPGuards_Scans {
      * @since   2.0
      * @return  void
      */
-    public function enqueueStyles() {
+    public function enqueueStyles()
+    {
 
         wp_enqueue_style('wpguards_admin_css', plugin_dir_url(__FILE__) . 'css/WPGuards-admin.css');
 
     }
-
-    /**
-     * Register the JavaScript for the WPGuards scans.
-     *
-     * @since   2.0
-     * @return  void
-     */
-    public function enqueueScripts() {
-
-        wp_enqueue_script('wpguards_scans', plugin_dir_url(__FILE__) . 'js/WPGuards-scans.js', array('jquery'), false, true);
-
-    }
-
 }
+

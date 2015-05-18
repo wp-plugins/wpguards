@@ -30,11 +30,11 @@
 
             <div class="updated"><p><?php _e('Your scan is missing? It might take up to 4 hours to fully process the request.','wpguards'); ?></p></div>
 
-            <?php if (!empty($scanTransient)) : foreach ($scanTransient as $scan) : if ($scan->positives > 0) : ?>
+            <?php if ($positive) : ?>
             <div class="error"><p><?php printf(__('Scanner has performed %1$s tests which %2$s of them found suspicious content on your website. Please investigate the problem or ask for a <a href="%3$s">professional help</a>','wpguards'), $scan->tests, $scan->positives, admin_url('admin.php?page=wpguards_support')); ?></p></div>
             <?php else: ?>
             <div class="updated"><p><?php printf(__('Scanner has performed %1$s tests which none of them found suspicious content on your website. Click on test details to get more info.','wpguards'), $scan->tests); ?></p></div>
-            <?php endif; endforeach; endif; ?>
+            <?php endif; ?>
 
             <div class="postbox form">
                 <h3><?php _e('Scans','wpguards'); ?></h3>
