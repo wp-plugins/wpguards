@@ -1,0 +1,127 @@
+/**
+ * WPGuards calendar style
+ */
+
+.wpguards #calendar {
+
+	// reset some data
+	th,
+	td {
+		border-style: none;
+		text-align: center;
+	}
+
+	// header
+	.fc-toolbar {
+		h3 {
+			font-size: 1.5em;
+		}
+
+		.fc-button-group,
+		button {
+			display: block;
+			outline: none;
+		}
+	}
+
+	// calendar
+	.fc-view {
+		.fc-widget-header {
+			border-bottom-style: solid;
+			border-bottom-color: #e5e5e5 !important;
+
+			th {
+				color: rgb(130,130,150);
+				text-transform: uppercase;
+				padding: 15px 0;
+			}
+		}
+
+		.fc-widget-content {
+			.fc-week {
+				border-bottom-style: solid !important;
+				border-bottom-width: 1px !important;
+				border-bottom-color: #efefef !important;
+
+				.fc-day-number {
+					span {
+						display: block;
+						width: 30px;
+						height: 30px;
+						line-height: 30px;
+						border-radius: 50%;
+						text-align: center;
+						margin: 10px 0;
+						float: right;
+					}
+					&.fc-today span {
+						display: block;
+						background: #e0e0e0;
+						color: #fff;
+					}
+				}
+
+				.fc-event.scan,
+				.fc-event.backup { 
+					height: 30px;
+					line-height: 30px;
+					margin: 5px 0;
+					background: transparent !important;
+					border: none !important;
+					padding-right: 40px;
+					text-align: right;
+
+					.fc-time {
+						display: none;
+					}
+				}
+
+				.fc-event.backup:after {
+					position: absolute;
+					right: 2px;
+					top: 0;
+					font-family: "dashicons";
+					font-size: 20px;
+					color: #fff;
+					content: "\f321";
+					display: block;
+					width: 30px;
+					height: 30px;
+					line-height: 30px;
+					border-radius: 50%;
+					text-align: center;
+					background: #7ad03a !important;
+				}
+
+				.fc-event.backup.scheduled:after {
+					background: #ffba00 !important;
+				}
+
+				.fc-event.scan:after {
+					position: absolute;
+					right: 2px;
+					top: 0;
+					font-family: "dashicons";
+					font-size: 20px;
+					color: #fff;
+					content: "\f160";
+					display: block;
+					width: 30px;
+					height: 30px;
+					line-height: 30px;
+					border-radius: 50%;
+					text-align: center;
+					background: #7ad03a !important;
+				}
+
+				.fc-event.scan.red:after {
+					background: #dd3d36 !important;
+				}
+
+				.fc-event.scan.scheduled:after {
+					background: #ffba00 !important;
+				}
+			}
+		}
+	}
+}
