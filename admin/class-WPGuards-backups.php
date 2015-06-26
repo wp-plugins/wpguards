@@ -74,8 +74,43 @@ class WPGuards_Backups {
         if ($response->status == 'success') {
             // transient expires after 4 hours
             $transientTime = 14400;
-            set_transient('wpguards_backups', $response->data->backups, $transientTime);
-            set_transient('wpguards_nextBackup', $response->data->nextBackup, $transientTime);
+
+            if (isset($response->data->backups)) {
+                if (is_object($response->data->backups) && !empty($response->data->backups)) {
+                    foreach ($response->data->backups as $backup) {
+                        
+                        if (!isset($backup->location)) {
+                            continue;
+                        }
+
+                        if ($backup->location != 'dropbox') {
+                            continue;
+                        }
+
+                        $file = WP_CONTENT_DIR . '/infinitewp/backups/' . $backup->fileName;
+
+                        if (!file_exists($file)) {
+                            continue;
+                        }
+
+                        // after 4 hours its safe to delete file
+                        if ((intval($backup->time) + (4 * 60 * 60)) > time()) {
+                            continue;
+                        }
+                        
+                        @unlink($file); 
+                        $f = fopen($file, 'w'); 
+                        fclose($f);
+                    }
+
+                }
+
+                set_transient('wpguards_backups', $response->data->backups, $transientTime);
+            }
+
+            if (isset($response->data->nextBackup)) {
+                set_transient('wpguards_nextBackup', $response->data->nextBackup, $transientTime);
+            }
         }
     }
 

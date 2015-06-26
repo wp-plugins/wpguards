@@ -86,7 +86,10 @@ class WPGuards_Home {
             }
         }
 
-        if (is_array($scans) && !empty($scans)) {
+        $basicData = get_transient('wpguards_checkConnection');
+
+        // limit scans info to trial, standard and pro
+        if (is_array($scans) && !empty($scans) && in_array($basicData->planID, array('1', '3', '4'))) {
             foreach ($scans as $scan) {
                 $calendarData[] = array(
                     'start'     => $scan->date,

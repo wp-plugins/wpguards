@@ -26,9 +26,9 @@
                         <?php _e('On cheap servers there might be a problem with restoring backups due to timeouts. In this case recommended is to download backup to your hard drive and upload it manually to the FTP.','wpguards'); ?>
                     </p>
                     <?php
-                        if ($basicData->planID == '1') : 
+                        if ($basicData->planID == '1' || $basicData->planID == '2') : 
                             _e('Currently you are using free version of WPGuards. Backups are made on a weekly basis and they are kept locally.','wpguards');
-                        elseif ($basicData->planID == '2' || $basicData->planID == '3') :
+                        elseif ($basicData->planID == '3') :
                             _e('Currently you are using standard version of WPGuards. Backups are made on a weekly basis and they are kept on the external Dropbox drive.','wpguards');
                         elseif ($basicData->planID == '4') :
                             _e('Currently you are using premium version of WPGuards. Backups are made on a daily basis and they are kept on the external Dropbox drive.','wpguards');

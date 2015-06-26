@@ -43,6 +43,16 @@ class WPGuards_Scans {
         $this->WPGuards = $WPGuards;
         $this->options  = get_option('wpguards_settings');
 
+        $basicData = get_transient('wpguards_checkConnection');
+
+        if (!isset($basicData->planID)) {
+            return $this;
+        }
+
+        if ($basicData->planID == '2') {
+            return $this;
+        }
+
         $this->setScansTransient();
 
         // add submenu/menu page
@@ -83,16 +93,6 @@ class WPGuards_Scans {
      * @return void
      */
     public function addOptionPage() {
-
-        $basicData = get_transient('wpguards_checkConnection');
-
-        if (!isset($basicData->planID)) {
-            return;
-        }
-
-        if ($basicData->planID == '2') {
-            return;
-        }
 
         if (get_option('wpguards_connected')) {
             // display only settings page if user is not registered yet
